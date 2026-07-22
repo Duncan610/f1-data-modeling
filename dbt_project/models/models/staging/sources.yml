@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: bronze
+    catalog: f1_project
+    schema: bronze
+    tables:
+      - name: races_raw
+      - name: drivers_raw
+      - name: constructors_raw
+      - name: results_raw
+      - name: laps_raw
+      - name: pit_stops_raw
