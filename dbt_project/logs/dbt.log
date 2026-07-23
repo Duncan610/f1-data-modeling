@@ -464,3 +464,835 @@ FROM `f1_project`.`bronze`.`races_raw`
 [0m17:39:52.664629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6041f3f440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6041f3d3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff60414f3c80>]}
 [0m17:39:52.665310 [debug] [MainThread]: Flushing usage events
 [0m17:39:53.087715 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:51:38.084356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff23bf903440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff23c1436c30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff23bf9cee70>]}
+
+
+============================== 17:51:38.089475 | e39151f5-c216-4bae-81e9-6cb17bfdcd8f ==============================
+[0m17:51:38.089475 [info ] [MainThread]: Running with dbt=1.11.12
+[0m17:51:38.091522 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'target_path': 'None', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'log_cache_events': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'quiet': 'False', 'static_parser': 'True', 'printer_width': '80', 'invocation_command': 'dbt run --select stg_races stg_drivers --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'write_json': 'True', 'empty': 'False', 'warn_error': 'None', 'partial_parse': 'True'}
+[0m17:51:38.103284 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'f1_data_modeling'
+[0m17:51:38.107619 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.030788, "process_in_blocks": "15928", "process_kernel_time": 0.279691, "process_mem_max_rss": "103252", "process_out_blocks": "0", "process_user_time": 1.498347}
+[0m17:51:38.110095 [debug] [MainThread]: Command `dbt run` failed at 17:51:38.109908 after 2.03 seconds
+[0m17:51:38.114896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff23c032b6e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff23bf8b7950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff23bf8b78f0>]}
+[0m17:51:38.119734 [debug] [MainThread]: Flushing usage events
+[0m17:51:38.277104 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:01:48.600132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6cc4031820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6cc3743e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6cc3743c80>]}
+
+
+============================== 18:01:48.604000 | e75460c8-2551-41f5-9a49-3cd7a499a8f9 ==============================
+[0m18:01:48.604000 [info ] [MainThread]: Running with dbt=1.11.12
+[0m18:01:48.605752 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt run --select stg_races stg_drivers --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'printer_width': '80', 'target_path': 'None', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'log_format': 'default', 'empty': 'False', 'cache_selected_only': 'False', 'introspect': 'True', 'no_print': 'None', 'write_json': 'True', 'static_parser': 'True', 'use_colors': 'True'}
+[0m18:01:49.592078 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:01:49.593600 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:01:49.594947 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:01:50.437382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e75460c8-2551-41f5-9a49-3cd7a499a8f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6cc55d8320>]}
+[0m18:01:50.524564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e75460c8-2551-41f5-9a49-3cd7a499a8f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6caf830e60>]}
+[0m18:01:50.525912 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m18:01:50.661326 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m18:01:51.329166 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m18:01:51.330389 [debug] [MainThread]: Partial parsing: added file: f1_data_modeling://models/staging/stg_drivers.sql
+[0m18:01:51.678862 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m18:01:51.693184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e75460c8-2551-41f5-9a49-3cd7a499a8f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6cae8d0c20>]}
+[0m18:01:51.858303 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m18:01:51.883873 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m18:01:51.940038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e75460c8-2551-41f5-9a49-3cd7a499a8f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6caf191e20>]}
+[0m18:01:51.941067 [info ] [MainThread]: Found 2 models, 6 sources, 770 macros
+[0m18:01:51.941949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e75460c8-2551-41f5-9a49-3cd7a499a8f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff6cc37b5310>]}
+[0m18:01:51.944404 [info ] [MainThread]: 
+[0m18:01:51.945314 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:01:51.946150 [info ] [MainThread]: 
+[0m18:01:51.947267 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m18:01:51.948078 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m18:01:51.955282 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m18:01:51.957180 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m18:01:51.971303 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m18:01:51.972277 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "e75460c8-2551-41f5-9a49-3cd7a499a8f9", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m18:01:51.973003 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:01:53.227952 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186c0-95c4-1da8-9d83-b3deea0fdf9a) - Created
+[0m18:08:38.151464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f498bb440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f49abfa70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f49a56d20>]}
+
+
+============================== 18:08:38.155904 | 868f08f5-4010-4593-a557-717afca44b0f ==============================
+[0m18:08:38.155904 [info ] [MainThread]: Running with dbt=1.11.12
+[0m18:08:38.157102 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select stg_races stg_drivers --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'cache_selected_only': 'False', 'target_path': 'None', 'introspect': 'True', 'quiet': 'False', 'warn_error': 'None', 'empty': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'partial_parse': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default'}
+[0m18:08:39.236960 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:08:39.238299 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:08:39.239070 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:08:40.006380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '868f08f5-4010-4593-a557-717afca44b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f351f7f80>]}
+[0m18:08:40.114423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '868f08f5-4010-4593-a557-717afca44b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f467743e0>]}
+[0m18:08:40.115685 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m18:08:40.243867 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m18:08:40.535590 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:08:40.536651 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:08:40.537371 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:08:40.546724 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m18:08:40.574880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '868f08f5-4010-4593-a557-717afca44b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f3533e540>]}
+[0m18:08:40.712358 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m18:08:40.740698 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m18:08:40.799097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '868f08f5-4010-4593-a557-717afca44b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f48c65970>]}
+[0m18:08:40.800183 [info ] [MainThread]: Found 2 models, 6 sources, 770 macros
+[0m18:08:40.801363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '868f08f5-4010-4593-a557-717afca44b0f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5f49251280>]}
+[0m18:08:40.804454 [info ] [MainThread]: 
+[0m18:08:40.805533 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:08:40.806437 [info ] [MainThread]: 
+[0m18:08:40.807594 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m18:08:40.808336 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m18:08:40.817398 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m18:08:40.819517 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m18:08:40.841007 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m18:08:40.843529 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "868f08f5-4010-4593-a557-717afca44b0f", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m18:08:40.844426 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:08:41.713988 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186c1-8957-18cb-8944-b1153953419c) - Created
+[0m18:31:32.788367 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a79e2ed80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a78aaef00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a7953ff80>]}
+
+
+============================== 18:31:32.792308 | f883c544-b412-4090-8276-8c385482cac7 ==============================
+[0m18:31:32.792308 [info ] [MainThread]: Running with dbt=1.11.12
+[0m18:31:32.793315 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'debug': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'printer_width': '80', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'fail_fast': 'False', 'invocation_command': 'dbt run --select stg_races stg_drivers --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'write_json': 'True'}
+[0m18:31:33.786856 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:31:33.788272 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:31:33.789021 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:31:34.619199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a788a9400>]}
+[0m18:31:34.723870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a6565ec30>]}
+[0m18:31:34.725134 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m18:31:34.866958 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m18:31:36.938310 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:31:36.939429 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:31:36.940238 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:31:36.949372 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m18:31:36.977014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a64ada720>]}
+[0m18:31:37.118167 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m18:31:37.141051 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m18:31:37.191908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a64aadbb0>]}
+[0m18:31:37.192934 [info ] [MainThread]: Found 2 models, 6 sources, 770 macros
+[0m18:31:37.193749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a64adade0>]}
+[0m18:31:37.196053 [info ] [MainThread]: 
+[0m18:31:37.199794 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:31:37.201668 [info ] [MainThread]: 
+[0m18:31:37.210807 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m18:31:37.211725 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m18:31:37.218955 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m18:31:37.225501 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m18:31:37.243393 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m18:31:37.244490 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "f883c544-b412-4090-8276-8c385482cac7", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m18:31:37.245437 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:31:38.004526 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186c4-bdab-1087-9fb2-70e2e3cfc546) - Created
+[0m18:31:38.856096 [debug] [ThreadPool]: SQL status: OK in 1.610 seconds
+[0m18:31:38.862947 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186c4-bdab-1087-9fb2-70e2e3cfc546, command-id=01f186c4-bdbd-1485-9e50-e6b1df8443c9) - Closing
+[0m18:31:38.864171 [debug] [ThreadPool]: On list_f1_project: Close
+[0m18:31:38.865066 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186c4-bdab-1087-9fb2-70e2e3cfc546) - Closing
+[0m18:31:38.933807 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project_silver) - Creating connection
+[0m18:31:38.936057 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project_silver'
+[0m18:31:38.944534 [debug] [ThreadPool]: Using databricks connection "list_f1_project_silver"
+[0m18:31:38.945571 [debug] [ThreadPool]: On list_f1_project_silver: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "f883c544-b412-4090-8276-8c385482cac7", "connection_name": "list_f1_project_silver"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'f1_project'
+  AND table_schema = 'silver'
+
+  
+[0m18:31:38.946421 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:31:39.115121 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186c4-be5a-13e0-bce7-bc6911fa90d3) - Created
+[0m18:31:41.106646 [debug] [ThreadPool]: SQL status: OK in 2.160 seconds
+[0m18:31:41.114976 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186c4-be5a-13e0-bce7-bc6911fa90d3, command-id=01f186c4-be66-1c22-868e-dcff49cd6e6a) - Closing
+[0m18:31:41.116389 [debug] [ThreadPool]: On list_f1_project_silver: Close
+[0m18:31:41.117208 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186c4-be5a-13e0-bce7-bc6911fa90d3) - Closing
+[0m18:31:41.187987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a7619c680>]}
+[0m18:31:41.197112 [debug] [Thread-3 (]: Began running node model.f1_data_modeling.stg_drivers
+[0m18:31:41.197802 [debug] [Thread-4 (]: Began running node model.f1_data_modeling.stg_races
+[0m18:31:41.199283 [info ] [Thread-3 (]: 1 of 2 START sql view model silver.stg_drivers ................................. [RUN]
+[0m18:31:41.200994 [info ] [Thread-4 (]: 2 of 2 START sql view model silver.stg_races ................................... [RUN]
+[0m18:31:41.203479 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_drivers) - Creating connection
+[0m18:31:41.204546 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_races) - Creating connection
+[0m18:31:41.205389 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_drivers'
+[0m18:31:41.206216 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_races'
+[0m18:31:41.207045 [debug] [Thread-3 (]: Began compiling node model.f1_data_modeling.stg_drivers
+[0m18:31:41.207807 [debug] [Thread-4 (]: Began compiling node model.f1_data_modeling.stg_races
+[0m18:31:41.215533 [debug] [Thread-3 (]: Writing injected SQL for node "model.f1_data_modeling.stg_drivers"
+[0m18:31:41.220907 [debug] [Thread-4 (]: Writing injected SQL for node "model.f1_data_modeling.stg_races"
+[0m18:31:41.332872 [debug] [Thread-3 (]: Began executing node model.f1_data_modeling.stg_drivers
+[0m18:31:41.350426 [debug] [Thread-3 (]: MATERIALIZING VIEW
+[0m18:31:41.377018 [debug] [Thread-3 (]: Creating view `f1_project`.`silver`.`stg_drivers`
+[0m18:31:41.380276 [debug] [Thread-4 (]: Began executing node model.f1_data_modeling.stg_races
+[0m18:31:41.396723 [debug] [Thread-3 (]: Writing runtime sql for node "model.f1_data_modeling.stg_drivers"
+[0m18:31:41.401076 [debug] [Thread-4 (]: MATERIALIZING VIEW
+[0m18:31:41.403440 [debug] [Thread-4 (]: Creating view `f1_project`.`silver`.`stg_races`
+[0m18:31:41.404613 [debug] [Thread-4 (]: Writing runtime sql for node "model.f1_data_modeling.stg_races"
+[0m18:31:41.576623 [debug] [Thread-3 (]: Using databricks connection "model.f1_data_modeling.stg_drivers"
+[0m18:31:41.578010 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_drivers: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "f883c544-b412-4090-8276-8c385482cac7", "node_id": "model.f1_data_modeling.stg_drivers"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_drivers`
+  
+  as (
+    WITH deduped AS(
+    SELECT
+        code AS driver_code,
+        driverId AS driver_id,
+        familyName AS family_name,
+        givenName AS given_name,
+        nationality,
+        season,
+        url AS driver_url,
+        CAST(dateofBirth AS DATE) AS date_of_birth,
+        CAST(permanentNumber AS int) AS permanent_number,
+        ROW_NUMBER() OVER(PARTITION BY driverId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`drivers_raw`
+)
+SELECT 
+    driver_id,
+    driver_code,
+    given_name,
+    family_name,
+    date_of_birth,
+    nationality,
+    permanent_number,
+    driver_url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m18:31:41.579079 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:31:41.604998 [debug] [Thread-4 (]: Using databricks connection "model.f1_data_modeling.stg_races"
+[0m18:31:41.606215 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_races: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "f883c544-b412-4090-8276-8c385482cac7", "node_id": "model.f1_data_modeling.stg_races"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_races`
+  
+  as (
+    SELECT
+    cast(season AS int) AS season,
+    cast(round AS int) AS round,
+    raceName as race_name,
+    date as race_date,
+    Circuit.circuitId as circuit_id,
+    Circuit.circuitName as circuit_name,
+    Circuit.url as circuit_url,
+    Circuit.Location.locality as circuit_locality,
+    Circuit.Location.country as circuit_country,
+    cast(Circuit.Location.lat as double) as circuit_lat,
+    cast(Circuit.Location.long as double) as circuit_long,
+    to_timestamp(concat(FirstPractice.date, 'T', FirstPractice.time)) as first_practice,
+    to_timestamp(concat(SecondPractice.date, 'T', SecondPractice.time)) as second_practice,
+    to_timestamp(concat(ThirdPractice.date, 'T', ThirdPractice.time)) as third_practice,
+    to_timestamp(concat(Qualifying.date, 'T', Qualifying.time)) as qualifying,
+    to_timestamp(concat(Sprint.date, 'T', Sprint.time)) as sprint,
+    to_timestamp(concat(SprintQualifying.date, 'T', SprintQualifying.time)) as sprint_qualifying,
+    to_timestamp(concat(SprintShootout.date, 'T', SprintShootout.time)) as sprint_shootout,
+    url as race_url
+
+FROM `f1_project`.`bronze`.`races_raw`
+  )
+
+[0m18:31:41.607132 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m18:31:41.805287 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186c4-bff2-1005-b29a-6e24f7da4598) - Created
+[0m18:31:41.806156 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186c4-bff6-1a1a-b18c-4b333c5bcecf) - Created
+[0m18:31:45.434945 [debug] [Thread-3 (]: SQL status: OK in 3.860 seconds
+[0m18:31:45.436978 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f186c4-bff2-1005-b29a-6e24f7da4598, command-id=01f186c4-c001-1ad6-b38c-b854b4ed86f1) - Closing
+[0m18:31:45.449735 [debug] [Thread-3 (]: Applying tags to relation None
+[0m18:31:45.452669 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_drivers: Close
+[0m18:31:45.453600 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186c4-bff2-1005-b29a-6e24f7da4598) - Closing
+[0m18:31:45.530882 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a645ac4a0>]}
+[0m18:31:45.532187 [info ] [Thread-3 (]: 1 of 2 OK created sql view model silver.stg_drivers ............................ [[32mOK[0m in 4.33s]
+[0m18:31:45.533218 [debug] [Thread-3 (]: Finished running node model.f1_data_modeling.stg_drivers
+[0m18:31:45.546571 [debug] [Thread-4 (]: SQL status: OK in 3.940 seconds
+[0m18:31:45.548294 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f186c4-bff6-1a1a-b18c-4b333c5bcecf, command-id=01f186c4-c001-1dd9-b0f4-9ef3e6058f43) - Closing
+[0m18:31:45.549408 [debug] [Thread-4 (]: Applying tags to relation None
+[0m18:31:45.550600 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_races: Close
+[0m18:31:45.551344 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186c4-bff6-1a1a-b18c-4b333c5bcecf) - Closing
+[0m18:31:45.614612 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f883c544-b412-4090-8276-8c385482cac7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a645ae0c0>]}
+[0m18:31:45.616076 [info ] [Thread-4 (]: 2 of 2 OK created sql view model silver.stg_races .............................. [[32mOK[0m in 4.41s]
+[0m18:31:45.617159 [debug] [Thread-4 (]: Finished running node model.f1_data_modeling.stg_races
+[0m18:31:45.619041 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m18:31:45.619830 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m18:31:45.621323 [info ] [MainThread]: 
+[0m18:31:45.622201 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 8.41 seconds (8.41s).
+[0m18:31:45.623494 [debug] [MainThread]: Command end result
+[0m18:31:45.682420 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m18:31:45.685895 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m18:31:45.786841 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Workspace/f1_project/f1-data-modeling/dbt_project/target/run_results.json
+[0m18:31:45.787711 [info ] [MainThread]: 
+[0m18:31:45.788581 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:31:45.789303 [info ] [MainThread]: 
+[0m18:31:45.790154 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:31:45.791683 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 13.4718275, "process_in_blocks": "44472", "process_kernel_time": 0.452241, "process_mem_max_rss": "265440", "process_out_blocks": "0", "process_user_time": 4.466351}
+[0m18:31:45.792612 [debug] [MainThread]: Command `dbt run` succeeded at 18:31:45.792450 after 13.47 seconds
+[0m18:31:45.793467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a78a0ccb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a65030d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5a64fae030>]}
+[0m18:31:45.794284 [debug] [MainThread]: Flushing usage events
+[0m18:31:46.525445 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:03:39.336536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76e098e660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76e098ec30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76e098f2f0>]}
+
+
+============================== 20:03:39.340263 | 2ca8e104-095c-4526-bbbd-7e0f56d04528 ==============================
+[0m20:03:39.340263 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:03:39.341237 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'write_json': 'True', 'debug': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'empty': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'warn_error': 'None', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'partial_parse': 'True', 'fail_fast': 'False', 'printer_width': '80', 'version_check': 'True', 'target_path': 'None', 'log_format': 'default', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m20:03:40.367679 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:03:40.369054 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:03:40.370131 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:03:41.187755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2ca8e104-095c-4526-bbbd-7e0f56d04528', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76e17fd100>]}
+[0m20:03:41.287849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2ca8e104-095c-4526-bbbd-7e0f56d04528', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76e09d6270>]}
+[0m20:03:41.289069 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m20:03:41.436822 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m20:03:43.271668 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m20:03:43.272981 [debug] [MainThread]: Partial parsing: added file: f1_data_modeling://models/staging/stg_constructors.sql
+[0m20:03:43.592737 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m20:03:43.606279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2ca8e104-095c-4526-bbbd-7e0f56d04528', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76cc783f50>]}
+[0m20:03:43.728762 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m20:03:43.754180 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m20:03:43.811011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2ca8e104-095c-4526-bbbd-7e0f56d04528', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76cc6d4620>]}
+[0m20:03:43.811922 [info ] [MainThread]: Found 3 models, 6 sources, 770 macros
+[0m20:03:43.812632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2ca8e104-095c-4526-bbbd-7e0f56d04528', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff76cc6453d0>]}
+[0m20:03:43.814772 [info ] [MainThread]: 
+[0m20:03:43.815556 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:03:43.816259 [info ] [MainThread]: 
+[0m20:03:43.817126 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:03:43.817702 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:03:43.824572 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m20:03:43.826335 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m20:03:43.839605 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m20:03:43.840493 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "2ca8e104-095c-4526-bbbd-7e0f56d04528", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m20:03:43.841093 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:03:44.846928 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d1-9bd8-1908-8965-d43050e21a19) - Created
+[0m20:07:52.084624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70e83429c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70e70bd010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70e99d6300>]}
+
+
+============================== 20:07:52.088251 | 113abba8-459a-4dea-8f0c-1752c7d37390 ==============================
+[0m20:07:52.088251 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:07:52.089237 [debug] [MainThread]: running dbt with arguments {'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'static_parser': 'True', 'empty': 'False', 'warn_error': 'None', 'write_json': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'introspect': 'True', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'quiet': 'False', 'cache_selected_only': 'False', 'partial_parse': 'True', 'no_print': 'None', 'debug': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'target_path': 'None', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors--project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m20:07:53.038279 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:07:53.039575 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:07:53.040383 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:07:53.805057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '113abba8-459a-4dea-8f0c-1752c7d37390', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70d354fb00>]}
+[0m20:07:53.906373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '113abba8-459a-4dea-8f0c-1752c7d37390', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70e4840110>]}
+[0m20:07:53.907608 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m20:07:54.033242 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m20:07:54.406949 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:07:54.408094 [debug] [MainThread]: Partial parsing: updated file: f1_data_modeling://models/staging/stg_constructors.sql
+[0m20:07:54.726312 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m20:07:54.739377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '113abba8-459a-4dea-8f0c-1752c7d37390', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70d2aa4290>]}
+[0m20:07:54.867577 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m20:07:54.891539 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m20:07:54.937691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '113abba8-459a-4dea-8f0c-1752c7d37390', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70d2a90560>]}
+[0m20:07:54.938644 [info ] [MainThread]: Found 3 models, 6 sources, 770 macros
+[0m20:07:54.939828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '113abba8-459a-4dea-8f0c-1752c7d37390', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70d2a053d0>]}
+[0m20:07:54.941344 [warn ] [MainThread]: The selection criterion 'stg_constructors--project-dir' does not match any enabled nodes
+[0m20:07:54.942166 [error] [MainThread]: Encountered an error:
+Non-relative patterns are unsupported
+[0m20:07:54.946526 [error] [MainThread]: Traceback (most recent call last):
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/cli/main.py", line 593, in run
+    results = task.run()
+              ^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/task/runnable.py", line 610, in run
+    self._runtime_initialize()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/task/compile.py", line 143, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/task/runnable.py", line 186, in _runtime_initialize
+    self.job_queue = self.get_graph_queue()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/task/runnable.py", line 176, in get_graph_queue
+    return selector.get_graph_queue(spec, preserve_edges)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 358, in get_graph_queue
+    selected_nodes = self.get_selected(spec)
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 346, in get_selected
+    selected_nodes, indirect_only = self.select_nodes(
+                                    ^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 166, in select_nodes
+    direct_nodes, indirect_nodes = self.select_nodes_recursively(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 134, in select_nodes_recursively
+    self.select_nodes_recursively(spec=component, warn_on_no_nodes=warn_on_no_nodes)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 134, in select_nodes_recursively
+    self.select_nodes_recursively(spec=component, warn_on_no_nodes=warn_on_no_nodes)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 134, in select_nodes_recursively
+    self.select_nodes_recursively(spec=component, warn_on_no_nodes=warn_on_no_nodes)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    direct_nodes, indirect_nodes = self.get_nodes_from_criteria(spec)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 80, in get_nodes_from_criteria
+    collected = self.select_included(nodes, spec)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector.py", line 66, in select_included
+    return set(method.search(included_nodes, spec.value))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector_methods.py", line 476, in search
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-614f152b-2fbc-49fe-88dd-792072f94ba7/lib/python3.12/site-packages/dbt/graph/selector_methods.py", line 476, in <genexpr>
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1092, in glob
+    raise NotImplementedError("Non-relative patterns are unsupported")
+NotImplementedError: Non-relative patterns are unsupported
+
+[0m20:07:54.948109 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.019216, "process_in_blocks": "104", "process_kernel_time": 0.333372, "process_mem_max_rss": "256916", "process_out_blocks": "24", "process_user_time": 3.798082}
+[0m20:07:54.949043 [debug] [MainThread]: Command `dbt run` failed at 20:07:54.948929 after 3.02 seconds
+[0m20:07:54.949782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70e7c1b500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70d2acf9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff70d2a05010>]}
+[0m20:07:54.950417 [debug] [MainThread]: Flushing usage events
+[0m20:07:55.295682 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:08:11.318534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5696214c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff56960b12e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5697c33ef0>]}
+
+
+============================== 20:08:11.322126 | d813d578-779c-4de3-a715-7b321e83a322 ==============================
+[0m20:08:11.322126 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:08:11.323162 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'log_format': 'default', 'log_cache_events': 'False', 'quiet': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'write_json': 'True', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'fail_fast': 'False', 'printer_width': '80', 'empty': 'False', 'debug': 'False', 'partial_parse': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'use_colors': 'True', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'cache_selected_only': 'False'}
+[0m20:08:12.267604 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:08:12.271018 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:08:12.272446 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:08:13.050450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd813d578-779c-4de3-a715-7b321e83a322', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff56846a14f0>]}
+[0m20:08:13.150717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd813d578-779c-4de3-a715-7b321e83a322', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5694e9efc0>]}
+[0m20:08:13.151880 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m20:08:13.273260 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m20:08:13.568380 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:08:13.569447 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:08:13.570264 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:08:13.579548 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m20:08:13.614327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd813d578-779c-4de3-a715-7b321e83a322', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff5694e78050>]}
+[0m20:08:13.750018 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m20:08:13.767858 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m20:08:13.806089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd813d578-779c-4de3-a715-7b321e83a322', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff56954e0e90>]}
+[0m20:08:13.807091 [info ] [MainThread]: Found 3 models, 6 sources, 770 macros
+[0m20:08:13.808020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd813d578-779c-4de3-a715-7b321e83a322', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff56814f8470>]}
+[0m20:08:13.811843 [info ] [MainThread]: 
+[0m20:08:13.812810 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:08:13.813612 [info ] [MainThread]: 
+[0m20:08:13.815002 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:08:13.815799 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:08:13.822673 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m20:08:13.827658 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m20:08:13.844899 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m20:08:13.845851 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "d813d578-779c-4de3-a715-7b321e83a322", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m20:08:13.846608 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:08:14.954591 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d2-3cea-14c4-a2cc-8a6066e103cc) - Created
+[0m20:09:24.945119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff028e7c67b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff028e109040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff028e109010>]}
+
+
+============================== 20:09:24.948698 | 353409b7-7397-44de-9cd2-fb898e42a4f6 ==============================
+[0m20:09:24.948698 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:09:24.949788 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'static_parser': 'True', 'log_cache_events': 'False', 'printer_width': '80', 'empty': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'no_print': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'use_colors': 'True', 'target_path': 'None', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'introspect': 'True', 'indirect_selection': 'eager'}
+[0m20:09:25.875106 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:09:25.876361 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:09:25.877112 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:09:26.611521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '353409b7-7397-44de-9cd2-fb898e42a4f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff028fed3c20>]}
+[0m20:09:26.717959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '353409b7-7397-44de-9cd2-fb898e42a4f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff028ec8bfe0>]}
+[0m20:09:26.719212 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m20:09:26.842816 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m20:09:27.153897 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:09:27.155046 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:09:27.155848 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:09:27.164689 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m20:09:27.191199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '353409b7-7397-44de-9cd2-fb898e42a4f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff0279a75f40>]}
+[0m20:09:27.318140 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m20:09:27.339422 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m20:09:27.383519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '353409b7-7397-44de-9cd2-fb898e42a4f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff02797acb60>]}
+[0m20:09:27.384412 [info ] [MainThread]: Found 3 models, 6 sources, 770 macros
+[0m20:09:27.385154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '353409b7-7397-44de-9cd2-fb898e42a4f6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xff027a1b8560>]}
+[0m20:09:27.387457 [info ] [MainThread]: 
+[0m20:09:27.388122 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:09:27.388703 [info ] [MainThread]: 
+[0m20:09:27.389644 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:09:27.390239 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:09:27.397109 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m20:09:27.398858 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m20:09:27.413264 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m20:09:27.414213 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "353409b7-7397-44de-9cd2-fb898e42a4f6", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m20:09:27.415916 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:09:28.391845 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d2-68b5-151d-8264-67c6994b6a51) - Created
+[0m20:10:43.829426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc644e55580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc64504d520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc644e547a0>]}
+
+
+============================== 20:10:43.832891 | 2d79a662-709d-437b-9b49-70363a51d415 ==============================
+[0m20:10:43.832891 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:10:43.833826 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'no_print': 'None', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'introspect': 'True', 'use_colors': 'True', 'target_path': 'None', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'write_json': 'True', 'empty': 'False', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'warn_error': 'None', 'version_check': 'True', 'partial_parse': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m20:10:44.766452 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:10:44.767738 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:10:44.768409 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:10:45.525235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2d79a662-709d-437b-9b49-70363a51d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc644c2bc80>]}
+[0m20:10:45.626521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2d79a662-709d-437b-9b49-70363a51d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc6313020f0>]}
+[0m20:10:45.627737 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m20:10:45.751633 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m20:10:46.039507 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:10:46.040370 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:10:46.041027 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:10:46.052099 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m20:10:46.080515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2d79a662-709d-437b-9b49-70363a51d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc630fa0950>]}
+[0m20:10:46.205133 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m20:10:46.240905 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m20:10:46.313560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2d79a662-709d-437b-9b49-70363a51d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc630e3d970>]}
+[0m20:10:46.314851 [info ] [MainThread]: Found 3 models, 6 sources, 770 macros
+[0m20:10:46.315866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2d79a662-709d-437b-9b49-70363a51d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffc6312e0e60>]}
+[0m20:10:46.318324 [info ] [MainThread]: 
+[0m20:10:46.320354 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:10:46.321417 [info ] [MainThread]: 
+[0m20:10:46.323162 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:10:46.323907 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:10:46.333027 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m20:10:46.334781 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m20:10:46.349308 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m20:10:46.350408 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "2d79a662-709d-437b-9b49-70363a51d415", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m20:10:46.351646 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:10:47.069768 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d2-9796-1940-b69d-a637dfee3044) - Created
+[0m20:16:24.537991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff916908fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff916e7f5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff91625a180>]}
+
+
+============================== 20:16:24.541817 | abb75e4d-1a35-43b7-a938-bead1550c2f5 ==============================
+[0m20:16:24.541817 [info ] [MainThread]: Running with dbt=1.11.12
+[0m20:16:24.542843 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'quiet': 'False', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'debug': 'False', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'log_format': 'default', 'partial_parse': 'True', 'printer_width': '80', 'introspect': 'True', 'write_json': 'True', 'use_colors': 'True', 'warn_error': 'None'}
+[0m20:16:25.491436 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:16:25.492741 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:16:25.493488 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:16:26.231725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff917699d90>]}
+[0m20:16:26.335581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff915389a60>]}
+[0m20:16:26.336946 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m20:16:26.508305 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m20:16:26.835230 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:16:26.836222 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:16:26.839097 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:16:26.848419 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m20:16:26.876279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff901a3e930>]}
+[0m20:16:27.032139 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m20:16:27.056036 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m20:16:27.110680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff90159d880>]}
+[0m20:16:27.111734 [info ] [MainThread]: Found 3 models, 6 sources, 770 macros
+[0m20:16:27.112669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff901576a50>]}
+[0m20:16:27.115398 [info ] [MainThread]: 
+[0m20:16:27.116229 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:16:27.116920 [info ] [MainThread]: 
+[0m20:16:27.117990 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:16:27.119146 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:16:27.126267 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m20:16:27.128364 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m20:16:27.143661 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m20:16:27.145160 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "abb75e4d-1a35-43b7-a938-bead1550c2f5", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m20:16:27.146031 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:16:27.734379 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d3-62a6-1431-8b60-427caeb85c4a) - Created
+[0m20:16:45.708991 [debug] [ThreadPool]: SQL status: OK in 18.560 seconds
+[0m20:16:45.715925 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186d3-62a6-1431-8b60-427caeb85c4a, command-id=01f186d3-62b6-105e-b180-d3709ac2b96c) - Closing
+[0m20:16:45.815617 [debug] [ThreadPool]: On list_f1_project: Close
+[0m20:16:45.816989 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d3-62a6-1431-8b60-427caeb85c4a) - Closing
+[0m20:16:45.876842 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project_silver) - Creating connection
+[0m20:16:45.878735 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project_silver'
+[0m20:16:45.884685 [debug] [ThreadPool]: Using databricks connection "list_f1_project_silver"
+[0m20:16:45.885497 [debug] [ThreadPool]: On list_f1_project_silver: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "abb75e4d-1a35-43b7-a938-bead1550c2f5", "connection_name": "list_f1_project_silver"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'f1_project'
+  AND table_schema = 'silver'
+
+  
+[0m20:16:45.886215 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:16:46.049222 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d3-6d94-1090-a3bb-c2dbd7d87703) - Created
+[0m20:16:48.416745 [debug] [ThreadPool]: SQL status: OK in 2.530 seconds
+[0m20:16:48.420096 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186d3-6d94-1090-a3bb-c2dbd7d87703, command-id=01f186d3-6da0-147b-bb1b-3415c2d9a306) - Closing
+[0m20:16:48.421240 [debug] [ThreadPool]: On list_f1_project_silver: Close
+[0m20:16:48.422036 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d3-6d94-1090-a3bb-c2dbd7d87703) - Closing
+[0m20:16:48.487248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff917bdf110>]}
+[0m20:16:48.494732 [debug] [Thread-3 (]: Began running node model.f1_data_modeling.stg_constructors
+[0m20:16:48.495362 [debug] [Thread-4 (]: Began running node model.f1_data_modeling.stg_drivers
+[0m20:16:48.500742 [info ] [Thread-4 (]: 2 of 3 START sql view model silver.stg_drivers ................................. [RUN]
+[0m20:16:48.497250 [info ] [Thread-3 (]: 1 of 3 START sql view model silver.stg_constructors ............................ [RUN]
+[0m20:16:48.496297 [debug] [Thread-5 (]: Began running node model.f1_data_modeling.stg_races
+[0m20:16:48.501957 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_drivers) - Creating connection
+[0m20:16:48.503042 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_constructors) - Creating connection
+[0m20:16:48.504999 [info ] [Thread-5 (]: 3 of 3 START sql view model silver.stg_races ................................... [RUN]
+[0m20:16:48.505748 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_drivers'
+[0m20:16:48.506524 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_constructors'
+[0m20:16:48.507372 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_races) - Creating connection
+[0m20:16:48.508283 [debug] [Thread-4 (]: Began compiling node model.f1_data_modeling.stg_drivers
+[0m20:16:48.509016 [debug] [Thread-3 (]: Began compiling node model.f1_data_modeling.stg_constructors
+[0m20:16:48.509773 [debug] [Thread-5 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_races'
+[0m20:16:48.519651 [debug] [Thread-4 (]: Writing injected SQL for node "model.f1_data_modeling.stg_drivers"
+[0m20:16:48.523493 [debug] [Thread-3 (]: Writing injected SQL for node "model.f1_data_modeling.stg_constructors"
+[0m20:16:48.525005 [debug] [Thread-5 (]: Began compiling node model.f1_data_modeling.stg_races
+[0m20:16:48.532431 [debug] [Thread-5 (]: Writing injected SQL for node "model.f1_data_modeling.stg_races"
+[0m20:16:48.647077 [debug] [Thread-4 (]: Began executing node model.f1_data_modeling.stg_drivers
+[0m20:16:48.662634 [debug] [Thread-4 (]: MATERIALIZING VIEW
+[0m20:16:48.683468 [debug] [Thread-4 (]: Creating view `f1_project`.`silver`.`stg_drivers`
+[0m20:16:48.690108 [debug] [Thread-3 (]: Began executing node model.f1_data_modeling.stg_constructors
+[0m20:16:48.696270 [debug] [Thread-4 (]: Writing runtime sql for node "model.f1_data_modeling.stg_drivers"
+[0m20:16:48.699047 [debug] [Thread-3 (]: MATERIALIZING VIEW
+[0m20:16:48.699928 [debug] [Thread-5 (]: Began executing node model.f1_data_modeling.stg_races
+[0m20:16:48.701861 [debug] [Thread-3 (]: Creating view `f1_project`.`silver`.`stg_constructors`
+[0m20:16:48.706059 [debug] [Thread-3 (]: Writing runtime sql for node "model.f1_data_modeling.stg_constructors"
+[0m20:16:48.704714 [debug] [Thread-5 (]: MATERIALIZING VIEW
+[0m20:16:48.708822 [debug] [Thread-5 (]: Creating view `f1_project`.`silver`.`stg_races`
+[0m20:16:48.709983 [debug] [Thread-5 (]: Writing runtime sql for node "model.f1_data_modeling.stg_races"
+[0m20:16:48.817777 [debug] [Thread-4 (]: Using databricks connection "model.f1_data_modeling.stg_drivers"
+[0m20:16:48.819278 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "abb75e4d-1a35-43b7-a938-bead1550c2f5", "node_id": "model.f1_data_modeling.stg_drivers"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_drivers`
+  
+  as (
+    WITH deduped AS(
+    SELECT
+        code AS driver_code,
+        driverId AS driver_id,
+        familyName AS family_name,
+        givenName AS given_name,
+        nationality,
+        season,
+        url AS driver_url,
+        CAST(dateofBirth AS DATE) AS date_of_birth,
+        CAST(permanentNumber AS int) AS permanent_number,
+        ROW_NUMBER() OVER(PARTITION BY driverId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`drivers_raw`
+)
+SELECT 
+    driver_id,
+    driver_code,
+    given_name,
+    family_name,
+    date_of_birth,
+    nationality,
+    permanent_number,
+    driver_url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m20:16:48.820306 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:16:48.848746 [debug] [Thread-5 (]: Using databricks connection "model.f1_data_modeling.stg_races"
+[0m20:16:48.850620 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "abb75e4d-1a35-43b7-a938-bead1550c2f5", "node_id": "model.f1_data_modeling.stg_races"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_races`
+  
+  as (
+    SELECT
+    cast(season AS int) AS season,
+    cast(round AS int) AS round,
+    raceName as race_name,
+    date as race_date,
+    Circuit.circuitId as circuit_id,
+    Circuit.circuitName as circuit_name,
+    Circuit.url as circuit_url,
+    Circuit.Location.locality as circuit_locality,
+    Circuit.Location.country as circuit_country,
+    cast(Circuit.Location.lat as double) as circuit_lat,
+    cast(Circuit.Location.long as double) as circuit_long,
+    to_timestamp(concat(FirstPractice.date, 'T', FirstPractice.time)) as first_practice,
+    to_timestamp(concat(SecondPractice.date, 'T', SecondPractice.time)) as second_practice,
+    to_timestamp(concat(ThirdPractice.date, 'T', ThirdPractice.time)) as third_practice,
+    to_timestamp(concat(Qualifying.date, 'T', Qualifying.time)) as qualifying,
+    to_timestamp(concat(Sprint.date, 'T', Sprint.time)) as sprint,
+    to_timestamp(concat(SprintQualifying.date, 'T', SprintQualifying.time)) as sprint_qualifying,
+    to_timestamp(concat(SprintShootout.date, 'T', SprintShootout.time)) as sprint_shootout,
+    url as race_url
+
+FROM `f1_project`.`bronze`.`races_raw`
+  )
+
+[0m20:16:48.851553 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m20:16:48.865268 [debug] [Thread-3 (]: Using databricks connection "model.f1_data_modeling.stg_constructors"
+[0m20:16:48.866384 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "abb75e4d-1a35-43b7-a938-bead1550c2f5", "node_id": "model.f1_data_modeling.stg_constructors"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_constructors`
+  
+  as (
+    WITH deduped AS(
+    SELECT  
+        constructorId AS constructor_id,
+        name AS driver_name,
+        nationality AS driver_nationality,
+        season,
+        url,
+        ROW_NUMBER() OVER(PARTITION BY constructorId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`constructors_raw`
+)
+SELECT
+    constructor_id,
+    driver_name,
+    driver_nationality,
+    season,
+    url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m20:16:48.867340 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:16:49.124562 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186d3-6f67-12e2-8d3a-09a74a7d5f5e) - Created
+[0m20:16:49.125354 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186d3-6f6e-17fe-a9c2-6f18f1a0be4d) - Created
+[0m20:16:49.149245 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186d3-6f6e-12db-8cad-d1320270196c) - Created
+[0m20:16:53.965805 [debug] [Thread-3 (]: SQL status: OK in 5.100 seconds
+[0m20:16:53.967741 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f186d3-6f6e-17fe-a9c2-6f18f1a0be4d, command-id=01f186d3-6f75-1c0e-8bf3-ea7e38f0095b) - Closing
+[0m20:16:53.979495 [debug] [Thread-3 (]: Applying tags to relation None
+[0m20:16:53.982458 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: Close
+[0m20:16:53.983325 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186d3-6f6e-17fe-a9c2-6f18f1a0be4d) - Closing
+[0m20:16:54.039328 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff901cf27b0>]}
+[0m20:16:54.040674 [info ] [Thread-3 (]: 1 of 3 OK created sql view model silver.stg_constructors ....................... [[32mOK[0m in 5.54s]
+[0m20:16:54.041694 [debug] [Thread-3 (]: Finished running node model.f1_data_modeling.stg_constructors
+[0m20:16:54.101753 [debug] [Thread-5 (]: SQL status: OK in 5.250 seconds
+[0m20:16:54.103408 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f186d3-6f6e-12db-8cad-d1320270196c, command-id=01f186d3-6f79-1b6a-aa6d-b961125bccf5) - Closing
+[0m20:16:54.104515 [debug] [Thread-5 (]: Applying tags to relation None
+[0m20:16:54.105778 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: Close
+[0m20:16:54.106595 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186d3-6f6e-12db-8cad-d1320270196c) - Closing
+[0m20:16:54.175498 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff901cf27b0>]}
+[0m20:16:54.176866 [info ] [Thread-5 (]: 3 of 3 OK created sql view model silver.stg_races .............................. [[32mOK[0m in 5.67s]
+[0m20:16:54.177880 [debug] [Thread-5 (]: Finished running node model.f1_data_modeling.stg_races
+[0m20:16:54.211898 [debug] [Thread-4 (]: SQL status: OK in 5.390 seconds
+[0m20:16:54.213505 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f186d3-6f67-12e2-8d3a-09a74a7d5f5e, command-id=01f186d3-6f76-10a0-8348-bf7462d85f9d) - Closing
+[0m20:16:54.214522 [debug] [Thread-4 (]: Applying tags to relation None
+[0m20:16:54.215700 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: Close
+[0m20:16:54.216378 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186d3-6f67-12e2-8d3a-09a74a7d5f5e) - Closing
+[0m20:16:54.273407 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'abb75e4d-1a35-43b7-a938-bead1550c2f5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff901127680>]}
+[0m20:16:54.274839 [info ] [Thread-4 (]: 2 of 3 OK created sql view model silver.stg_drivers ............................ [[32mOK[0m in 5.77s]
+[0m20:16:54.275896 [debug] [Thread-4 (]: Finished running node model.f1_data_modeling.stg_drivers
+[0m20:16:54.277656 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:16:54.278404 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:16:54.279385 [info ] [MainThread]: 
+[0m20:16:54.280154 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 27.16 seconds (27.16s).
+[0m20:16:54.281341 [debug] [MainThread]: Command end result
+[0m20:16:54.345706 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m20:16:54.350304 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m20:16:54.385022 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Workspace/f1_project/f1-data-modeling/dbt_project/target/run_results.json
+[0m20:16:54.385935 [info ] [MainThread]: 
+[0m20:16:54.386818 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:16:54.387629 [info ] [MainThread]: 
+[0m20:16:54.388387 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m20:16:54.389897 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 30.003994, "process_in_blocks": "6744", "process_kernel_time": 0.344539, "process_mem_max_rss": "265148", "process_out_blocks": "0", "process_user_time": 4.485748}
+[0m20:16:54.390744 [debug] [MainThread]: Command `dbt run` succeeded at 20:16:54.390630 after 30.00 seconds
+[0m20:16:54.391518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff91625a180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff915388800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff90237e360>]}
+[0m20:16:54.392331 [debug] [MainThread]: Flushing usage events
+[0m20:16:55.008143 [debug] [MainThread]: An error was encountered while trying to flush usage events
