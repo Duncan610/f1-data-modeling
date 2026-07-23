@@ -1296,3 +1296,1474 @@ WHERE rn = 1
 [0m20:16:54.391518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff91625a180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff915388800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff90237e360>]}
 [0m20:16:54.392331 [debug] [MainThread]: Flushing usage events
 [0m20:16:55.008143 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:02:50.804327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae568e0cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae5647dd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae55b5ee70>]}
+
+
+============================== 21:02:50.809360 | ef1b6693-186b-45dd-b9fc-9e7531558ff3 ==============================
+[0m21:02:50.809360 [info ] [MainThread]: Running with dbt=1.11.12
+[0m21:02:50.810860 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors stg_results--project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'static_parser': 'True', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'partial_parse': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'quiet': 'False', 'use_colors': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'debug': 'False', 'no_print': 'None', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'indirect_selection': 'eager', 'empty': 'False'}
+[0m21:02:51.822465 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:02:51.823978 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:02:51.825712 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:02:52.709464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ef1b6693-186b-45dd-b9fc-9e7531558ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae564f1400>]}
+[0m21:02:52.798736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ef1b6693-186b-45dd-b9fc-9e7531558ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae53291070>]}
+[0m21:02:52.800035 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m21:02:52.942681 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m21:02:53.629224 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m21:02:53.630407 [debug] [MainThread]: Partial parsing: added file: f1_data_modeling://models/staging/stg_results.sql
+[0m21:02:53.965802 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m21:02:53.982425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ef1b6693-186b-45dd-b9fc-9e7531558ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae414c4650>]}
+[0m21:02:54.142030 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m21:02:54.167780 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m21:02:54.272772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ef1b6693-186b-45dd-b9fc-9e7531558ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae414b0a40>]}
+[0m21:02:54.274032 [info ] [MainThread]: Found 4 models, 6 sources, 770 macros
+[0m21:02:54.275180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ef1b6693-186b-45dd-b9fc-9e7531558ff3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae40cfd700>]}
+[0m21:02:54.279005 [warn ] [MainThread]: The selection criterion 'stg_results--project-dir' does not match any enabled nodes
+[0m21:02:54.280434 [error] [MainThread]: Encountered an error:
+Non-relative patterns are unsupported
+[0m21:02:54.285372 [error] [MainThread]: Traceback (most recent call last):
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/cli/main.py", line 593, in run
+    results = task.run()
+              ^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/task/runnable.py", line 610, in run
+    self._runtime_initialize()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/task/compile.py", line 143, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/task/runnable.py", line 186, in _runtime_initialize
+    self.job_queue = self.get_graph_queue()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/task/runnable.py", line 176, in get_graph_queue
+    return selector.get_graph_queue(spec, preserve_edges)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 358, in get_graph_queue
+    selected_nodes = self.get_selected(spec)
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 346, in get_selected
+    selected_nodes, indirect_only = self.select_nodes(
+                                    ^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 166, in select_nodes
+    direct_nodes, indirect_nodes = self.select_nodes_recursively(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 134, in select_nodes_recursively
+    self.select_nodes_recursively(spec=component, warn_on_no_nodes=warn_on_no_nodes)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 134, in select_nodes_recursively
+    self.select_nodes_recursively(spec=component, warn_on_no_nodes=warn_on_no_nodes)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 134, in select_nodes_recursively
+    self.select_nodes_recursively(spec=component, warn_on_no_nodes=warn_on_no_nodes)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 131, in select_nodes_recursively
+    direct_nodes, indirect_nodes = self.get_nodes_from_criteria(spec)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 80, in get_nodes_from_criteria
+    collected = self.select_included(nodes, spec)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector.py", line 66, in select_included
+    return set(method.search(included_nodes, spec.value))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector_methods.py", line 476, in search
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-1453ab75-5f2b-497e-9c55-e35b249e7963/lib/python3.12/site-packages/dbt/graph/selector_methods.py", line 476, in <genexpr>
+    paths = set(p.relative_to(root) for p in root.glob(selector))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1092, in glob
+    raise NotImplementedError("Non-relative patterns are unsupported")
+NotImplementedError: Non-relative patterns are unsupported
+
+[0m21:02:54.287398 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 5.4203067, "process_in_blocks": "37816", "process_kernel_time": 0.53771, "process_mem_max_rss": "256792", "process_out_blocks": "0", "process_user_time": 4.012909}
+[0m21:02:54.288816 [debug] [MainThread]: Command `dbt run` failed at 21:02:54.288654 after 5.42 seconds
+[0m21:02:54.289831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae56b6ed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae57ac8d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffae414b03b0>]}
+[0m21:02:54.290723 [debug] [MainThread]: Flushing usage events
+[0m21:02:54.507444 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:03:15.624122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab6450fe90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab63beee70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab646e6690>]}
+
+
+============================== 21:03:15.628808 | ff15915f-30ec-43c3-9a20-14380c485e5d ==============================
+[0m21:03:15.628808 [info ] [MainThread]: Running with dbt=1.11.12
+[0m21:03:15.630115 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'partial_parse': 'True', 'target_path': 'None', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'no_print': 'None', 'use_colors': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'log_cache_events': 'False', 'debug': 'False', 'empty': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'warn_error': 'None', 'version_check': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors stg_results --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'static_parser': 'True', 'introspect': 'True'}
+[0m21:03:16.659739 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:03:16.661033 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:03:16.662069 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:03:17.475025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4ffdc230>]}
+[0m21:03:17.563750 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab64580c50>]}
+[0m21:03:17.565059 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m21:03:17.695517 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m21:03:17.984492 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:03:17.985456 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:03:17.990643 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:03:18.007248 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m21:03:18.058494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4ff00920>]}
+[0m21:03:18.204858 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m21:03:18.267437 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m21:03:18.319359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4faadb20>]}
+[0m21:03:18.320464 [info ] [MainThread]: Found 4 models, 6 sources, 770 macros
+[0m21:03:18.325358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4fa66a50>]}
+[0m21:03:18.328545 [info ] [MainThread]: 
+[0m21:03:18.329649 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:03:18.330456 [info ] [MainThread]: 
+[0m21:03:18.331524 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m21:03:18.332242 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:03:18.339333 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m21:03:18.341129 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m21:03:18.355777 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m21:03:18.356937 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m21:03:18.357671 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:03:18.855491 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d9-ee24-1530-9be4-bf08261f1588) - Created
+[0m21:03:28.521118 [debug] [ThreadPool]: SQL status: OK in 10.160 seconds
+[0m21:03:28.530441 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186d9-ee24-1530-9be4-bf08261f1588, command-id=01f186d9-ee44-1a32-b90e-ca021dc5e0c8) - Closing
+[0m21:03:28.611866 [debug] [ThreadPool]: On list_f1_project: Close
+[0m21:03:28.613023 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d9-ee24-1530-9be4-bf08261f1588) - Closing
+[0m21:03:28.682900 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project_silver) - Creating connection
+[0m21:03:28.684891 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project_silver'
+[0m21:03:28.691237 [debug] [ThreadPool]: Using databricks connection "list_f1_project_silver"
+[0m21:03:28.692307 [debug] [ThreadPool]: On list_f1_project_silver: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "connection_name": "list_f1_project_silver"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'f1_project'
+  AND table_schema = 'silver'
+
+  
+[0m21:03:28.693107 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:03:28.840897 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d9-f42e-143c-95b0-cb8217f2535b) - Created
+[0m21:03:32.024215 [debug] [ThreadPool]: SQL status: OK in 3.330 seconds
+[0m21:03:32.030587 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186d9-f42e-143c-95b0-cb8217f2535b, command-id=01f186d9-f438-152b-96da-985d4b3cfc12) - Closing
+[0m21:03:32.032407 [debug] [ThreadPool]: On list_f1_project_silver: Close
+[0m21:03:32.033410 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186d9-f42e-143c-95b0-cb8217f2535b) - Closing
+[0m21:03:32.100688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4fdebad0>]}
+[0m21:03:32.107240 [debug] [Thread-3 (]: Began running node model.f1_data_modeling.stg_constructors
+[0m21:03:32.108031 [debug] [Thread-4 (]: Began running node model.f1_data_modeling.stg_drivers
+[0m21:03:32.108829 [debug] [Thread-5 (]: Began running node model.f1_data_modeling.stg_races
+[0m21:03:32.109626 [debug] [Thread-6 (]: Began running node model.f1_data_modeling.stg_results
+[0m21:03:32.111142 [info ] [Thread-3 (]: 1 of 4 START sql view model silver.stg_constructors ............................ [RUN]
+[0m21:03:32.114155 [info ] [Thread-4 (]: 2 of 4 START sql view model silver.stg_drivers ................................. [RUN]
+[0m21:03:32.116159 [info ] [Thread-5 (]: 3 of 4 START sql view model silver.stg_races ................................... [RUN]
+[0m21:03:32.123286 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_races) - Creating connection
+[0m21:03:32.119386 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_constructors) - Creating connection
+[0m21:03:32.121472 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_drivers) - Creating connection
+[0m21:03:32.118014 [info ] [Thread-6 (]: 4 of 4 START sql view model silver.stg_results ................................. [RUN]
+[0m21:03:32.124782 [debug] [Thread-5 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_races'
+[0m21:03:32.125903 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_constructors'
+[0m21:03:32.126905 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_drivers'
+[0m21:03:32.128046 [debug] [Thread-6 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_results) - Creating connection
+[0m21:03:32.129084 [debug] [Thread-5 (]: Began compiling node model.f1_data_modeling.stg_races
+[0m21:03:32.130112 [debug] [Thread-3 (]: Began compiling node model.f1_data_modeling.stg_constructors
+[0m21:03:32.131640 [debug] [Thread-4 (]: Began compiling node model.f1_data_modeling.stg_drivers
+[0m21:03:32.132559 [debug] [Thread-6 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_results'
+[0m21:03:32.149596 [debug] [Thread-3 (]: Writing injected SQL for node "model.f1_data_modeling.stg_constructors"
+[0m21:03:32.146006 [debug] [Thread-5 (]: Writing injected SQL for node "model.f1_data_modeling.stg_races"
+[0m21:03:32.153812 [debug] [Thread-4 (]: Writing injected SQL for node "model.f1_data_modeling.stg_drivers"
+[0m21:03:32.154887 [debug] [Thread-6 (]: Began compiling node model.f1_data_modeling.stg_results
+[0m21:03:32.160756 [debug] [Thread-6 (]: Writing injected SQL for node "model.f1_data_modeling.stg_results"
+[0m21:03:32.240076 [debug] [Thread-3 (]: Began executing node model.f1_data_modeling.stg_constructors
+[0m21:03:32.257147 [debug] [Thread-3 (]: MATERIALIZING VIEW
+[0m21:03:32.282316 [debug] [Thread-3 (]: Creating view `f1_project`.`silver`.`stg_constructors`
+[0m21:03:32.292731 [debug] [Thread-6 (]: Began executing node model.f1_data_modeling.stg_results
+[0m21:03:32.293415 [debug] [Thread-4 (]: Began executing node model.f1_data_modeling.stg_drivers
+[0m21:03:32.300097 [debug] [Thread-3 (]: Writing runtime sql for node "model.f1_data_modeling.stg_constructors"
+[0m21:03:32.303418 [debug] [Thread-6 (]: MATERIALIZING VIEW
+[0m21:03:32.306523 [debug] [Thread-4 (]: MATERIALIZING VIEW
+[0m21:03:32.311488 [debug] [Thread-4 (]: Creating view `f1_project`.`silver`.`stg_drivers`
+[0m21:03:32.313140 [debug] [Thread-4 (]: Writing runtime sql for node "model.f1_data_modeling.stg_drivers"
+[0m21:03:32.307134 [debug] [Thread-5 (]: Began executing node model.f1_data_modeling.stg_races
+[0m21:03:32.309600 [debug] [Thread-6 (]: Creating view `f1_project`.`silver`.`stg_results`
+[0m21:03:32.320960 [debug] [Thread-6 (]: Writing runtime sql for node "model.f1_data_modeling.stg_results"
+[0m21:03:32.318654 [debug] [Thread-5 (]: MATERIALIZING VIEW
+[0m21:03:32.325449 [debug] [Thread-5 (]: Creating view `f1_project`.`silver`.`stg_races`
+[0m21:03:32.327247 [debug] [Thread-5 (]: Writing runtime sql for node "model.f1_data_modeling.stg_races"
+[0m21:03:32.385296 [debug] [Thread-4 (]: Using databricks connection "model.f1_data_modeling.stg_drivers"
+[0m21:03:32.386755 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_drivers"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_drivers`
+  
+  as (
+    WITH deduped AS(
+    SELECT
+        code AS driver_code,
+        driverId AS driver_id,
+        familyName AS family_name,
+        givenName AS given_name,
+        nationality,
+        season,
+        url AS driver_url,
+        CAST(dateofBirth AS DATE) AS date_of_birth,
+        CAST(permanentNumber AS int) AS permanent_number,
+        ROW_NUMBER() OVER(PARTITION BY driverId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`drivers_raw`
+)
+SELECT 
+    driver_id,
+    driver_code,
+    given_name,
+    family_name,
+    date_of_birth,
+    nationality,
+    permanent_number,
+    driver_url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m21:03:32.388086 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:03:32.401374 [debug] [Thread-6 (]: Using databricks connection "model.f1_data_modeling.stg_results"
+[0m21:03:32.402538 [debug] [Thread-6 (]: On model.f1_data_modeling.stg_results: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status AS status,
+FROM `f1_project`.`bronze`.`results_raw`
+  )
+
+[0m21:03:32.405087 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m21:03:32.435363 [debug] [Thread-3 (]: Using databricks connection "model.f1_data_modeling.stg_constructors"
+[0m21:03:32.437003 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_constructors"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_constructors`
+  
+  as (
+    WITH deduped AS(
+    SELECT  
+        constructorId AS constructor_id,
+        name AS driver_name,
+        nationality AS driver_nationality,
+        season,
+        url,
+        ROW_NUMBER() OVER(PARTITION BY constructorId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`constructors_raw`
+)
+SELECT
+    constructor_id,
+    driver_name,
+    driver_nationality,
+    season,
+    url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m21:03:32.438143 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:03:32.499665 [debug] [Thread-5 (]: Using databricks connection "model.f1_data_modeling.stg_races"
+[0m21:03:32.501141 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_races"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_races`
+  
+  as (
+    SELECT
+    cast(season AS int) AS season,
+    cast(round AS int) AS round,
+    raceName as race_name,
+    date as race_date,
+    Circuit.circuitId as circuit_id,
+    Circuit.circuitName as circuit_name,
+    Circuit.url as circuit_url,
+    Circuit.Location.locality as circuit_locality,
+    Circuit.Location.country as circuit_country,
+    cast(Circuit.Location.lat as double) as circuit_lat,
+    cast(Circuit.Location.long as double) as circuit_long,
+    to_timestamp(concat(FirstPractice.date, 'T', FirstPractice.time)) as first_practice,
+    to_timestamp(concat(SecondPractice.date, 'T', SecondPractice.time)) as second_practice,
+    to_timestamp(concat(ThirdPractice.date, 'T', ThirdPractice.time)) as third_practice,
+    to_timestamp(concat(Qualifying.date, 'T', Qualifying.time)) as qualifying,
+    to_timestamp(concat(Sprint.date, 'T', Sprint.time)) as sprint,
+    to_timestamp(concat(SprintQualifying.date, 'T', SprintQualifying.time)) as sprint_qualifying,
+    to_timestamp(concat(SprintShootout.date, 'T', SprintShootout.time)) as sprint_shootout,
+    url as race_url
+
+FROM `f1_project`.`bronze`.`races_raw`
+  )
+
+[0m21:03:32.502149 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m21:03:32.773077 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186d9-f67f-126a-b009-1e826397aad1) - Created
+[0m21:03:32.776502 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186d9-f687-1d05-bca2-7c90a79573ee) - Created
+[0m21:03:32.778319 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f186d9-f688-1668-9a97-99880dd71a1d) - Created
+[0m21:03:32.827374 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186d9-f68e-1f73-a1ba-1c165eb6d48d) - Created
+[0m21:03:33.971754 [debug] [Thread-6 (]: Databricks adapter: Exception while trying to execute query
+/* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status AS status,
+FROM `f1_project`.`bronze`.`results_raw`
+  )
+
+: 
+[PARSE_SYNTAX_ERROR] Syntax error at or near '.'. SQLSTATE: 42601 (line 38, pos 17)
+
+== SQL ==
+/* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status AS status,
+FROM `f1_project`.`bronze`.`results_raw`
+-----------------^^^
+  )
+
+Error properties: diagnostic-info=org.apache.hive.service.cli.HiveSQLException: Error running query: [PARSE_SYNTAX_ERROR] org.apache.spark.sql.catalyst.parser.ParseException: 
+[PARSE_SYNTAX_ERROR] Syntax error at or near '.'. SQLSTATE: 42601 (line 38, pos 17)
+
+== SQL ==
+/* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status AS status,
+FROM `f1_project`.`bronze`.`results_raw`
+-----------------^^^
+  )
+
+	at org.apache.spark.sql.hive.thriftserver.HiveThriftServerErrors$.runningQueryError(HiveThriftServerErrors.scala:58)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.$anonfun$execute$1(SparkExecuteStatementOperation.scala:1205)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at com.databricks.unity.UCSEphemeralState$Handle.runWith(UCSEphemeralState.scala:51)
+	at com.databricks.unity.HandleImpl.runWith(UCSHandle.scala:128)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.org$apache$spark$sql$hive$thriftserver$SparkExecuteStatementOperation$$execute(SparkExecuteStatementOperation.scala:898)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$6(SparkExecuteStatementOperation.scala:647)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at org.apache.spark.sql.execution.SQLExecution$.withRootExecution(SQLExecution.scala:1498)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$3(SparkExecuteStatementOperation.scala:647)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at com.databricks.util.TracingSpanUtils$.withTracing(TracingSpanUtils.scala:251)
+	at com.databricks.spark.util.DatabricksTracingHelper.withSpan(DatabricksSparkTracingHelper.scala:154)
+	at com.databricks.spark.util.DBRTracing$.withSpan(DBRTracing.scala:87)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.$anonfun$withLocalProperties$18(ThriftLocalProperties.scala:366)
+	at com.databricks.logging.AttributionContextTracing.$anonfun$withAttributionContext$1(AttributionContextTracing.scala:146)
+	at com.databricks.logging.AttributionContext$.$anonfun$withValue$1(AttributionContext.scala:349)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:59)
+	at com.databricks.logging.AttributionContext$.withValue(AttributionContext.scala:345)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext(AttributionContextTracing.scala:144)
+	at com.databricks.logging.AttributionContextTracing.withAttributionContext$(AttributionContextTracing.scala:141)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionContext(DatabricksSparkUsageLogger.scala:29)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags(AttributionContextTracing.scala:201)
+	at com.databricks.logging.AttributionContextTracing.withAttributionTags$(AttributionContextTracing.scala:182)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags(DatabricksSparkUsageLogger.scala:29)
+	at com.databricks.spark.util.PublicDBLogging.withAttributionTags0(DatabricksSparkUsageLogger.scala:108)
+	at com.databricks.spark.util.DatabricksSparkUsageLogger.withAttributionTags(DatabricksSparkUsageLogger.scala:215)
+	at com.databricks.spark.util.UsageLogging.$anonfun$withAttributionTags$1(UsageLogger.scala:668)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:780)
+	at com.databricks.spark.util.UsageLogging$.withAttributionTags(UsageLogger.scala:789)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags(UsageLogger.scala:668)
+	at com.databricks.spark.util.UsageLogging.withAttributionTags$(UsageLogger.scala:666)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withAttributionTags(SparkExecuteStatementOperation.scala:79)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.$anonfun$withLocalProperties$15(ThriftLocalProperties.scala:365)
+	at com.databricks.spark.util.IdentityClaim$.withClaim(IdentityClaim.scala:48)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties(ThriftLocalProperties.scala:360)
+	at org.apache.spark.sql.hive.thriftserver.ThriftLocalProperties.withLocalProperties$(ThriftLocalProperties.scala:180)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation.withLocalProperties(SparkExecuteStatementOperation.scala:79)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.$anonfun$run$2(SparkExecuteStatementOperation.scala:623)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at com.databricks.spark.util.DBRTracing$.withSpanFromParent(DBRTracing.scala:70)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:623)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2$$anon$3.run(SparkExecuteStatementOperation.scala:596)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.base/javax.security.auth.Subject.doAs(Subject.java:439)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1953)
+	at org.apache.spark.sql.hive.thriftserver.SparkExecuteStatementOperation$$anon$2.run(SparkExecuteStatementOperation.scala:661)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.spark.sql.catalyst.parser.ParseException: 
+[PARSE_SYNTAX_ERROR] Syntax error at or near '.'. SQLSTATE: 42601 (line 38, pos 17)
+
+== SQL ==
+/* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status AS status,
+FROM `f1_project`.`bronze`.`results_raw`
+-----------------^^^
+  )
+
+	at org.apache.spark.sql.catalyst.parser.ParseException.withCommand(parsers.scala:515)
+	at org.apache.spark.sql.catalyst.parser.AbstractParser$.executeWithTwoStageStrategy(parsers.scala:329)
+	at org.apache.spark.sql.catalyst.parser.SubstituteParamsParser.substitute(SubstituteParamsParser.scala:80)
+	at org.apache.spark.sql.catalyst.parser.ParameterHandler$.performSubstitution(ParameterHandler.scala:83)
+	at org.apache.spark.sql.catalyst.parser.ParameterHandler$.substituteParameters(ParameterHandler.scala:185)
+	at org.apache.spark.sql.execution.SparkSqlParser.parseInternal(SparkSqlParser.scala:283)
+	at org.apache.spark.sql.execution.SparkSqlParser.parseWithParameters(SparkSqlParser.scala:186)
+	at org.apache.spark.sql.execution.SparkSqlParser.parsePlanWithParameters(SparkSqlParser.scala:200)
+	at com.databricks.sql.QueryRuntimePredictionUtils$.$anonfun$getParsedPlanWithTracking$4(QueryRuntimePrediction.scala:492)
+	at com.databricks.spark.util.FrameProfiler$.$anonfun$record$1(FrameProfiler.scala:114)
+	at com.databricks.spark.util.FrameProfilerExporter$.maybeExportFrameProfiler(FrameProfilerExporter.scala:146)
+	at com.databricks.spark.util.FrameProfiler$.record(FrameProfiler.scala:105)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker.measurePhase(QueryPlanningTracker.scala:1021)
+	at com.databricks.sql.QueryRuntimePredictionUtils$.$anonfun$getParsedPlanWithTracking$3(QueryRuntimePrediction.scala:457)
+	at org.apache.spark.sql.catalyst.QueryPlanningTracker$.withTracker(QueryPlanningTracker.scala:275)
+	at com.databricks.sql.QueryRuntimePredictionUtils$.$anonfun$getParsedPlanWithTracking$2(QueryRuntimePrediction.scala:457)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withExecutionPhase$1(SQLExecution.scala:335)
+	at com.databricks.util.TracingSpanUtils$.withTracing(TracingSpanUtils.scala:251)
+	at com.databricks.spark.util.DatabricksTracingHelper.withSpan(DatabricksSparkTracingHelper.scala:154)
+	at com.databricks.spark.util.DBRTracing$.withSpan(DBRTracing.scala:87)
+	at org.apache.spark.sql.execution.SQLExecution$.withExecutionPhase(SQLExecution.scala:316)
+	at com.databricks.sql.QueryRuntimePredictionUtils$.$anonfun$getParsedPlanWithTracking$1(QueryRuntimePrediction.scala:456)
+	at com.databricks.sql.util.MemoryTrackerHelper.withMemoryTracking(MemoryTrackerHelper.scala:111)
+	at com.databricks.sql.QueryRuntimePredictionUtils$.getParsedPlanWithTracking(QueryRuntimePrediction.scala:452)
+	at com.databricks.sql.QueryRuntimePrediction.$anonfun$getQueryExecutionWithParsedPlan$1(QueryRuntimePrediction.scala:894)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:866)
+	at com.databricks.sql.QueryRuntimePrediction.getQueryExecutionWithParsedPlan(QueryRuntimePrediction.scala:885)
+	at com.databricks.sql.QueryRuntimePrediction.getRuntimeCategory(QueryRuntimePrediction.scala:609)
+	at com.databricks.sql.ClusterLoadMonitor.$anonfun$getRuntimeCategory$3(ClusterLoadMonitor.scala:1230)
+	at com.databricks.unity.UCSEphemeralState$Handle.runWith(UCSEphemeralState.scala:51)
+	at com.databricks.unity.HandleImpl.runWith(UCSHandle.scala:128)
+	at com.databricks.unity.HandleImpl.$anonfun$runWithAndClose$1(UCSHandle.scala:133)
+	at scala.util.Using$.resource(Using.scala:296)
+	at com.databricks.unity.HandleImpl.runWithAndClose(UCSHandle.scala:132)
+	at com.databricks.sql.ClusterLoadMonitor.$anonfun$getRuntimeCategory$2(ClusterLoadMonitor.scala:1225)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingRunnable.$anonfun$run$1(SparkThreadLocalForwardingThreadPoolExecutor.scala:171)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at com.databricks.spark.util.DBRTracing$.withSpanFromParent(DBRTracing.scala:70)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingHelper.$anonfun$runWithCaptured$7(SparkThreadLocalForwardingThreadPoolExecutor.scala:124)
+	at com.databricks.util.LexicalThreadLocal$Handle.runWith(LexicalThreadLocal.scala:63)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingHelper.$anonfun$runWithCaptured$6(SparkThreadLocalForwardingThreadPoolExecutor.scala:123)
+	at com.databricks.sql.transaction.tahoe.mst.MSTThreadHelper$.runWithMSTContext(MSTThreadHelper.scala:77)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingHelper.$anonfun$runWithCaptured$5(SparkThreadLocalForwardingThreadPoolExecutor.scala:120)
+	at com.databricks.spark.util.IdentityClaim$.withClaim(IdentityClaim.scala:48)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingHelper.$anonfun$runWithCaptured$4(SparkThreadLocalForwardingThreadPoolExecutor.scala:119)
+	at com.databricks.unity.UCSEphemeralState$Handle.runWith(UCSEphemeralState.scala:51)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingHelper.runWithCaptured(SparkThreadLocalForwardingThreadPoolExecutor.scala:118)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingHelper.runWithCaptured$(SparkThreadLocalForwardingThreadPoolExecutor.scala:95)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingRunnable.runWithCaptured(SparkThreadLocalForwardingThreadPoolExecutor.scala:168)
+	at org.apache.spark.util.threads.SparkThreadLocalCapturingRunnable.run(SparkThreadLocalForwardingThreadPoolExecutor.scala:171)
+	... 3 more
+, operation-id=01f186d9-f691-11dd-9c53-ff65c87bc92c
+[0m21:03:33.973748 [debug] [Thread-6 (]: On model.f1_data_modeling.stg_results: Close
+[0m21:03:33.974781 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f186d9-f688-1668-9a97-99880dd71a1d) - Closing
+[0m21:03:34.080668 [debug] [Thread-6 (]: Database Error in model stg_results (models/staging/stg_results.sql)
+  
+  [PARSE_SYNTAX_ERROR] Syntax error at or near '.'. SQLSTATE: 42601 (line 38, pos 17)
+  
+  == SQL ==
+  /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+  
+    
+    
+    
+    create or replace view `f1_project`.`silver`.`stg_results`
+    
+    as (
+      SELECT
+    Constructor.constructorId AS constructor_id,
+    Constructor.name AS constructor_name,
+    Constructor.nationality AS constructor_nationality,
+    Constructor.url AS constructor_url,
+    Driver.code AS driver_code,
+    Driver.dateOfBirth AS date_of_birth,
+    Driver.driverId AS driver_id,
+    Driver.familyName AS driver_family_name,
+    Driver.givenName AS driver_given_name,
+    Driver.nationality AS driver_nationality,
+    Driver.url AS driver_url,
+    Driver.permanentNumber AS driver_permanent_number,
+    FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+    FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+    FastestLap.Time.time AS fastest_lap_time,
+    FastestLap.lap AS fastest_lap,
+    FastestLap.rank AS fastest_lap_rank,
+    Time.millis AS time_in_millisecond,
+    Time.time AS time_in_seconds,
+    CAST(grid AS INT) AS grid,
+    CAST(laps AS INT) AS laps,
+    CAST(number AS INT) AS number,
+    CAST(points AS FLOAT) AS points,
+    CAST(positionText AS INT) AS position_text,
+    CAST(raceName AS STRING) AS race_name,
+    CAST(round AS INT) AS round,
+    CAST(season AS INT) AS season,
+    status AS status,
+  FROM `f1_project`.`bronze`.`results_raw`
+  -----------------^^^
+    )
+  
+  compiled code at target/run/f1_data_modeling/models/staging/stg_results.sql
+[0m21:03:34.083418 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4f5aeba0>]}
+[0m21:03:34.084847 [error] [Thread-6 (]: 4 of 4 ERROR creating sql view model silver.stg_results ........................ [[31mERROR[0m in 1.95s]
+[0m21:03:34.086456 [debug] [Thread-6 (]: Finished running node model.f1_data_modeling.stg_results
+[0m21:03:34.092217 [debug] [Thread-9 (]: Marking all children of 'model.f1_data_modeling.stg_results' to be skipped because of status 'error'.  Reason: Database Error in model stg_results (models/staging/stg_results.sql)
+  
+  [PARSE_SYNTAX_ERROR] Syntax error at or near '.'. SQLSTATE: 42601 (line 38, pos 17)
+  
+  == SQL ==
+  /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+  
+    
+    
+    
+    create or replace view `f1_project`.`silver`.`stg_results`
+    
+    as (
+      SELECT
+    Constructor.constructorId AS constructor_id,
+    Constructor.name AS constructor_name,
+    Constructor.nationality AS constructor_nationality,
+    Constructor.url AS constructor_url,
+    Driver.code AS driver_code,
+    Driver.dateOfBirth AS date_of_birth,
+    Driver.driverId AS driver_id,
+    Driver.familyName AS driver_family_name,
+    Driver.givenName AS driver_given_name,
+    Driver.nationality AS driver_nationality,
+    Driver.url AS driver_url,
+    Driver.permanentNumber AS driver_permanent_number,
+    FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+    FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+    FastestLap.Time.time AS fastest_lap_time,
+    FastestLap.lap AS fastest_lap,
+    FastestLap.rank AS fastest_lap_rank,
+    Time.millis AS time_in_millisecond,
+    Time.time AS time_in_seconds,
+    CAST(grid AS INT) AS grid,
+    CAST(laps AS INT) AS laps,
+    CAST(number AS INT) AS number,
+    CAST(points AS FLOAT) AS points,
+    CAST(positionText AS INT) AS position_text,
+    CAST(raceName AS STRING) AS race_name,
+    CAST(round AS INT) AS round,
+    CAST(season AS INT) AS season,
+    status AS status,
+  FROM `f1_project`.`bronze`.`results_raw`
+  -----------------^^^
+    )
+  
+  compiled code at target/run/f1_data_modeling/models/staging/stg_results.sql.
+[0m21:03:39.351299 [debug] [Thread-3 (]: SQL status: OK in 6.910 seconds
+[0m21:03:39.353433 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f186d9-f687-1d05-bca2-7c90a79573ee, command-id=01f186d9-f690-1f92-b648-187700a2dc23) - Closing
+[0m21:03:39.370221 [debug] [Thread-5 (]: SQL status: OK in 6.870 seconds
+[0m21:03:39.371986 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f186d9-f68e-1f73-a1ba-1c165eb6d48d, command-id=01f186d9-f698-194e-a0b8-f815afaf377e) - Closing
+[0m21:03:39.421102 [debug] [Thread-4 (]: SQL status: OK in 7.030 seconds
+[0m21:03:39.422924 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f186d9-f67f-126a-b009-1e826397aad1, command-id=01f186d9-f690-15a4-b315-fbbffff8a554) - Closing
+[0m21:03:39.480194 [debug] [Thread-5 (]: Applying tags to relation None
+[0m21:03:39.483274 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: Close
+[0m21:03:39.484751 [debug] [Thread-3 (]: Applying tags to relation None
+[0m21:03:39.485572 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186d9-f68e-1f73-a1ba-1c165eb6d48d) - Closing
+[0m21:03:39.550354 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: Close
+[0m21:03:39.551505 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186d9-f687-1d05-bca2-7c90a79573ee) - Closing
+[0m21:03:39.571812 [debug] [Thread-4 (]: Applying tags to relation None
+[0m21:03:39.636341 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4f637800>]}
+[0m21:03:39.637022 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: Close
+[0m21:03:39.638565 [info ] [Thread-5 (]: 3 of 4 OK created sql view model silver.stg_races .............................. [[32mOK[0m in 7.51s]
+[0m21:03:39.639465 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186d9-f67f-126a-b009-1e826397aad1) - Closing
+[0m21:03:39.640433 [debug] [Thread-5 (]: Finished running node model.f1_data_modeling.stg_races
+[0m21:03:39.706290 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4f56e720>]}
+[0m21:03:39.707956 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ff15915f-30ec-43c3-9a20-14380c485e5d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4f4a1940>]}
+[0m21:03:39.709957 [info ] [Thread-3 (]: 1 of 4 OK created sql view model silver.stg_constructors ....................... [[32mOK[0m in 7.59s]
+[0m21:03:39.711384 [info ] [Thread-4 (]: 2 of 4 OK created sql view model silver.stg_drivers ............................ [[32mOK[0m in 7.59s]
+[0m21:03:39.712441 [debug] [Thread-3 (]: Finished running node model.f1_data_modeling.stg_constructors
+[0m21:03:39.713445 [debug] [Thread-4 (]: Finished running node model.f1_data_modeling.stg_drivers
+[0m21:03:39.715714 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m21:03:39.716649 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:03:39.717656 [info ] [MainThread]: 
+[0m21:03:39.718594 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 21.39 seconds (21.39s).
+[0m21:03:39.720210 [debug] [MainThread]: Command end result
+[0m21:03:39.781082 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m21:03:39.784514 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m21:03:39.812974 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Workspace/f1_project/f1-data-modeling/dbt_project/target/run_results.json
+[0m21:03:39.813862 [info ] [MainThread]: 
+[0m21:03:39.814678 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m21:03:39.815340 [info ] [MainThread]: 
+[0m21:03:39.816087 [error] [MainThread]: [31mFailure in model stg_results (models/staging/stg_results.sql)[0m
+[0m21:03:39.816827 [error] [MainThread]:   Database Error in model stg_results (models/staging/stg_results.sql)
+  
+  [PARSE_SYNTAX_ERROR] Syntax error at or near '.'. SQLSTATE: 42601 (line 38, pos 17)
+  
+  == SQL ==
+  /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "ff15915f-30ec-43c3-9a20-14380c485e5d", "node_id": "model.f1_data_modeling.stg_results"} */
+  
+    
+    
+    
+    create or replace view `f1_project`.`silver`.`stg_results`
+    
+    as (
+      SELECT
+    Constructor.constructorId AS constructor_id,
+    Constructor.name AS constructor_name,
+    Constructor.nationality AS constructor_nationality,
+    Constructor.url AS constructor_url,
+    Driver.code AS driver_code,
+    Driver.dateOfBirth AS date_of_birth,
+    Driver.driverId AS driver_id,
+    Driver.familyName AS driver_family_name,
+    Driver.givenName AS driver_given_name,
+    Driver.nationality AS driver_nationality,
+    Driver.url AS driver_url,
+    Driver.permanentNumber AS driver_permanent_number,
+    FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+    FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+    FastestLap.Time.time AS fastest_lap_time,
+    FastestLap.lap AS fastest_lap,
+    FastestLap.rank AS fastest_lap_rank,
+    Time.millis AS time_in_millisecond,
+    Time.time AS time_in_seconds,
+    CAST(grid AS INT) AS grid,
+    CAST(laps AS INT) AS laps,
+    CAST(number AS INT) AS number,
+    CAST(points AS FLOAT) AS points,
+    CAST(positionText AS INT) AS position_text,
+    CAST(raceName AS STRING) AS race_name,
+    CAST(round AS INT) AS round,
+    CAST(season AS INT) AS season,
+    status AS status,
+  FROM `f1_project`.`bronze`.`results_raw`
+  -----------------^^^
+    )
+  
+  compiled code at target/run/f1_data_modeling/models/staging/stg_results.sql
+[0m21:03:39.817473 [info ] [MainThread]: 
+[0m21:03:39.818103 [info ] [MainThread]:   compiled code at target/compiled/f1_data_modeling/models/staging/stg_results.sql
+[0m21:03:39.818790 [info ] [MainThread]: 
+[0m21:03:39.819626 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m21:03:39.821207 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 24.317196, "process_in_blocks": "5208", "process_kernel_time": 0.515246, "process_mem_max_rss": "272212", "process_out_blocks": "0", "process_user_time": 4.96286}
+[0m21:03:39.822240 [debug] [MainThread]: Command `dbt run` failed at 21:03:39.822085 after 24.32 seconds
+[0m21:03:39.823080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab648a9df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab513d44d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffab4f492ed0>]}
+[0m21:03:39.823857 [debug] [MainThread]: Flushing usage events
+[0m21:03:40.299050 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:05:06.550385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff67387cd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff6736cc530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff6736cc920>]}
+
+
+============================== 21:05:06.554074 | e7431dfa-6629-4f3c-8b7e-10906d3feaf1 ==============================
+[0m21:05:06.554074 [info ] [MainThread]: Running with dbt=1.11.12
+[0m21:05:06.555162 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'cache_selected_only': 'False', 'use_colors': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'warn_error': 'None', 'partial_parse': 'True', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors stg_results --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'version_check': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'debug': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'introspect': 'True', 'empty': 'False', 'no_print': 'None', 'quiet': 'False'}
+[0m21:05:07.523262 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:05:07.524725 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:05:07.525672 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:05:08.324016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff675ffffe0>]}
+[0m21:05:08.455415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65fabbce0>]}
+[0m21:05:08.456861 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m21:05:08.607275 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m21:05:08.961488 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:05:08.962720 [debug] [MainThread]: Partial parsing: updated file: f1_data_modeling://models/staging/stg_results.sql
+[0m21:05:09.287946 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m21:05:09.302444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65fba8e00>]}
+[0m21:05:09.427323 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m21:05:09.447436 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m21:05:09.490497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65f240830>]}
+[0m21:05:09.493027 [info ] [MainThread]: Found 4 models, 6 sources, 770 macros
+[0m21:05:09.494653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65fbd5070>]}
+[0m21:05:09.497238 [info ] [MainThread]: 
+[0m21:05:09.499105 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:05:09.500076 [info ] [MainThread]: 
+[0m21:05:09.501323 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m21:05:09.502212 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:05:09.509615 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m21:05:09.511513 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m21:05:09.525432 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m21:05:09.582831 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "e7431dfa-6629-4f3c-8b7e-10906d3feaf1", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m21:05:09.583782 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:05:10.409339 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-30b2-1c6c-8134-924702e968cf) - Created
+[0m21:05:10.714417 [debug] [ThreadPool]: SQL status: OK in 1.130 seconds
+[0m21:05:10.719496 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186da-30b2-1c6c-8134-924702e968cf, command-id=01f186da-30c4-1252-a56c-6d3a889dee7f) - Closing
+[0m21:05:10.720685 [debug] [ThreadPool]: On list_f1_project: Close
+[0m21:05:10.721490 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-30b2-1c6c-8134-924702e968cf) - Closing
+[0m21:05:10.788000 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project_silver) - Creating connection
+[0m21:05:10.790780 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project_silver'
+[0m21:05:10.797422 [debug] [ThreadPool]: Using databricks connection "list_f1_project_silver"
+[0m21:05:10.798579 [debug] [ThreadPool]: On list_f1_project_silver: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "e7431dfa-6629-4f3c-8b7e-10906d3feaf1", "connection_name": "list_f1_project_silver"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'f1_project'
+  AND table_schema = 'silver'
+
+  
+[0m21:05:10.799809 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:05:10.959309 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-310c-1574-9c2a-b35b17305f61) - Created
+[0m21:05:11.693732 [debug] [ThreadPool]: SQL status: OK in 0.890 seconds
+[0m21:05:11.697095 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186da-310c-1574-9c2a-b35b17305f61, command-id=01f186da-3116-127d-a42f-587f8be04437) - Closing
+[0m21:05:11.698517 [debug] [ThreadPool]: On list_f1_project_silver: Close
+[0m21:05:11.699524 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-310c-1574-9c2a-b35b17305f61) - Closing
+[0m21:05:11.758957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65f2c2630>]}
+[0m21:05:11.763757 [debug] [Thread-3 (]: Began running node model.f1_data_modeling.stg_constructors
+[0m21:05:11.764479 [debug] [Thread-4 (]: Began running node model.f1_data_modeling.stg_drivers
+[0m21:05:11.765152 [debug] [Thread-5 (]: Began running node model.f1_data_modeling.stg_races
+[0m21:05:11.765783 [debug] [Thread-6 (]: Began running node model.f1_data_modeling.stg_results
+[0m21:05:11.766870 [info ] [Thread-3 (]: 1 of 4 START sql view model silver.stg_constructors ............................ [RUN]
+[0m21:05:11.768702 [info ] [Thread-4 (]: 2 of 4 START sql view model silver.stg_drivers ................................. [RUN]
+[0m21:05:11.771000 [info ] [Thread-5 (]: 3 of 4 START sql view model silver.stg_races ................................... [RUN]
+[0m21:05:11.773015 [info ] [Thread-6 (]: 4 of 4 START sql view model silver.stg_results ................................. [RUN]
+[0m21:05:11.774257 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_constructors) - Creating connection
+[0m21:05:11.777068 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_drivers) - Creating connection
+[0m21:05:11.778167 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_races) - Creating connection
+[0m21:05:11.779569 [debug] [Thread-6 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_results) - Creating connection
+[0m21:05:11.780930 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_constructors'
+[0m21:05:11.781761 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_drivers'
+[0m21:05:11.782647 [debug] [Thread-5 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_races'
+[0m21:05:11.783534 [debug] [Thread-6 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_results'
+[0m21:05:11.784325 [debug] [Thread-3 (]: Began compiling node model.f1_data_modeling.stg_constructors
+[0m21:05:11.785215 [debug] [Thread-4 (]: Began compiling node model.f1_data_modeling.stg_drivers
+[0m21:05:11.786059 [debug] [Thread-5 (]: Began compiling node model.f1_data_modeling.stg_races
+[0m21:05:11.786932 [debug] [Thread-6 (]: Began compiling node model.f1_data_modeling.stg_results
+[0m21:05:11.796960 [debug] [Thread-3 (]: Writing injected SQL for node "model.f1_data_modeling.stg_constructors"
+[0m21:05:11.801176 [debug] [Thread-4 (]: Writing injected SQL for node "model.f1_data_modeling.stg_drivers"
+[0m21:05:11.805285 [debug] [Thread-5 (]: Writing injected SQL for node "model.f1_data_modeling.stg_races"
+[0m21:05:11.809446 [debug] [Thread-6 (]: Writing injected SQL for node "model.f1_data_modeling.stg_results"
+[0m21:05:11.876927 [debug] [Thread-5 (]: Began executing node model.f1_data_modeling.stg_races
+[0m21:05:11.898971 [debug] [Thread-5 (]: MATERIALIZING VIEW
+[0m21:05:11.905835 [debug] [Thread-6 (]: Began executing node model.f1_data_modeling.stg_results
+[0m21:05:11.920465 [debug] [Thread-6 (]: MATERIALIZING VIEW
+[0m21:05:11.924585 [debug] [Thread-5 (]: Creating view `f1_project`.`silver`.`stg_races`
+[0m21:05:11.926400 [debug] [Thread-6 (]: Creating view `f1_project`.`silver`.`stg_results`
+[0m21:05:11.927252 [debug] [Thread-3 (]: Began executing node model.f1_data_modeling.stg_constructors
+[0m21:05:11.938703 [debug] [Thread-4 (]: Began executing node model.f1_data_modeling.stg_drivers
+[0m21:05:11.941996 [debug] [Thread-5 (]: Writing runtime sql for node "model.f1_data_modeling.stg_races"
+[0m21:05:11.943262 [debug] [Thread-6 (]: Writing runtime sql for node "model.f1_data_modeling.stg_results"
+[0m21:05:11.946399 [debug] [Thread-3 (]: MATERIALIZING VIEW
+[0m21:05:11.949367 [debug] [Thread-4 (]: MATERIALIZING VIEW
+[0m21:05:11.951972 [debug] [Thread-3 (]: Creating view `f1_project`.`silver`.`stg_constructors`
+[0m21:05:11.953541 [debug] [Thread-4 (]: Creating view `f1_project`.`silver`.`stg_drivers`
+[0m21:05:11.954750 [debug] [Thread-3 (]: Writing runtime sql for node "model.f1_data_modeling.stg_constructors"
+[0m21:05:11.955960 [debug] [Thread-4 (]: Writing runtime sql for node "model.f1_data_modeling.stg_drivers"
+[0m21:05:12.071360 [debug] [Thread-6 (]: Using databricks connection "model.f1_data_modeling.stg_results"
+[0m21:05:12.072563 [debug] [Thread-6 (]: On model.f1_data_modeling.stg_results: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "e7431dfa-6629-4f3c-8b7e-10906d3feaf1", "node_id": "model.f1_data_modeling.stg_results"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status
+FROM `f1_project`.`bronze`.`results_raw`
+  )
+
+[0m21:05:12.073668 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m21:05:12.091021 [debug] [Thread-3 (]: Using databricks connection "model.f1_data_modeling.stg_constructors"
+[0m21:05:12.092042 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "e7431dfa-6629-4f3c-8b7e-10906d3feaf1", "node_id": "model.f1_data_modeling.stg_constructors"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_constructors`
+  
+  as (
+    WITH deduped AS(
+    SELECT  
+        constructorId AS constructor_id,
+        name AS driver_name,
+        nationality AS driver_nationality,
+        season,
+        url,
+        ROW_NUMBER() OVER(PARTITION BY constructorId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`constructors_raw`
+)
+SELECT
+    constructor_id,
+    driver_name,
+    driver_nationality,
+    season,
+    url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m21:05:12.092942 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:05:12.110469 [debug] [Thread-5 (]: Using databricks connection "model.f1_data_modeling.stg_races"
+[0m21:05:12.111682 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "e7431dfa-6629-4f3c-8b7e-10906d3feaf1", "node_id": "model.f1_data_modeling.stg_races"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_races`
+  
+  as (
+    SELECT
+    cast(season AS int) AS season,
+    cast(round AS int) AS round,
+    raceName as race_name,
+    date as race_date,
+    Circuit.circuitId as circuit_id,
+    Circuit.circuitName as circuit_name,
+    Circuit.url as circuit_url,
+    Circuit.Location.locality as circuit_locality,
+    Circuit.Location.country as circuit_country,
+    cast(Circuit.Location.lat as double) as circuit_lat,
+    cast(Circuit.Location.long as double) as circuit_long,
+    to_timestamp(concat(FirstPractice.date, 'T', FirstPractice.time)) as first_practice,
+    to_timestamp(concat(SecondPractice.date, 'T', SecondPractice.time)) as second_practice,
+    to_timestamp(concat(ThirdPractice.date, 'T', ThirdPractice.time)) as third_practice,
+    to_timestamp(concat(Qualifying.date, 'T', Qualifying.time)) as qualifying,
+    to_timestamp(concat(Sprint.date, 'T', Sprint.time)) as sprint,
+    to_timestamp(concat(SprintQualifying.date, 'T', SprintQualifying.time)) as sprint_qualifying,
+    to_timestamp(concat(SprintShootout.date, 'T', SprintShootout.time)) as sprint_shootout,
+    url as race_url
+
+FROM `f1_project`.`bronze`.`races_raw`
+  )
+
+[0m21:05:12.112684 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m21:05:12.220467 [debug] [Thread-4 (]: Using databricks connection "model.f1_data_modeling.stg_drivers"
+[0m21:05:12.291124 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "e7431dfa-6629-4f3c-8b7e-10906d3feaf1", "node_id": "model.f1_data_modeling.stg_drivers"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_drivers`
+  
+  as (
+    WITH deduped AS(
+    SELECT
+        code AS driver_code,
+        driverId AS driver_id,
+        familyName AS family_name,
+        givenName AS given_name,
+        nationality,
+        season,
+        url AS driver_url,
+        CAST(dateofBirth AS DATE) AS date_of_birth,
+        CAST(permanentNumber AS int) AS permanent_number,
+        ROW_NUMBER() OVER(PARTITION BY driverId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`drivers_raw`
+)
+SELECT 
+    driver_id,
+    driver_code,
+    given_name,
+    family_name,
+    date_of_birth,
+    nationality,
+    permanent_number,
+    driver_url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m21:05:12.292223 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:05:12.385121 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186da-31e6-15d4-b397-9660e942718d) - Created
+[0m21:05:12.386567 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186da-31e7-1b55-af36-55def24bc854) - Created
+[0m21:05:12.385939 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f186da-31e1-1379-9ba8-a9557ccd5681) - Created
+[0m21:05:12.468703 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186da-31f6-192e-bc4a-378b005d8817) - Created
+[0m21:05:13.584483 [debug] [Thread-3 (]: SQL status: OK in 1.490 seconds
+[0m21:05:13.586561 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f186da-31e7-1b55-af36-55def24bc854, command-id=01f186da-31f0-1593-941b-f598a3df7bf0) - Closing
+[0m21:05:13.598773 [debug] [Thread-3 (]: Applying tags to relation None
+[0m21:05:13.601834 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: Close
+[0m21:05:13.603489 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186da-31e7-1b55-af36-55def24bc854) - Closing
+[0m21:05:13.667166 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65fed25a0>]}
+[0m21:05:13.668595 [info ] [Thread-3 (]: 1 of 4 OK created sql view model silver.stg_constructors ....................... [[32mOK[0m in 1.89s]
+[0m21:05:13.669824 [debug] [Thread-3 (]: Finished running node model.f1_data_modeling.stg_constructors
+[0m21:05:13.683021 [debug] [Thread-5 (]: SQL status: OK in 1.570 seconds
+[0m21:05:13.684712 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f186da-31e6-15d4-b397-9660e942718d, command-id=01f186da-31f0-10a4-bed4-cbdc11509a06) - Closing
+[0m21:05:13.687091 [debug] [Thread-6 (]: SQL status: OK in 1.610 seconds
+[0m21:05:13.687958 [debug] [Thread-5 (]: Applying tags to relation None
+[0m21:05:13.689553 [debug] [Thread-6 (]: Databricks adapter: Cursor(session-id=01f186da-31e1-1379-9ba8-a9557ccd5681, command-id=01f186da-31f0-1fcc-9a4f-b6e46888e870) - Closing
+[0m21:05:13.690940 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: Close
+[0m21:05:13.692059 [debug] [Thread-6 (]: Applying tags to relation None
+[0m21:05:13.693001 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186da-31e6-15d4-b397-9660e942718d) - Closing
+[0m21:05:13.747937 [debug] [Thread-4 (]: SQL status: OK in 1.460 seconds
+[0m21:05:13.749651 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f186da-31f6-192e-bc4a-378b005d8817, command-id=01f186da-31fc-173a-b8c9-c11ba6101949) - Closing
+[0m21:05:13.750822 [debug] [Thread-4 (]: Applying tags to relation None
+[0m21:05:13.752665 [debug] [Thread-6 (]: On model.f1_data_modeling.stg_results: Close
+[0m21:05:13.754090 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f186da-31e1-1379-9ba8-a9557ccd5681) - Closing
+[0m21:05:13.822294 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65e8ff560>]}
+[0m21:05:13.822972 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: Close
+[0m21:05:13.824159 [info ] [Thread-6 (]: 4 of 4 OK created sql view model silver.stg_results ............................ [[32mOK[0m in 2.04s]
+[0m21:05:13.825057 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186da-31f6-192e-bc4a-378b005d8817) - Closing
+[0m21:05:13.826171 [debug] [Thread-6 (]: Finished running node model.f1_data_modeling.stg_results
+[0m21:05:13.880536 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65e768e30>]}
+[0m21:05:13.881484 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e7431dfa-6629-4f3c-8b7e-10906d3feaf1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65e8ff3e0>]}
+[0m21:05:13.884318 [info ] [Thread-5 (]: 3 of 4 OK created sql view model silver.stg_races .............................. [[32mOK[0m in 2.10s]
+[0m21:05:13.885441 [info ] [Thread-4 (]: 2 of 4 OK created sql view model silver.stg_drivers ............................ [[32mOK[0m in 2.11s]
+[0m21:05:13.886593 [debug] [Thread-5 (]: Finished running node model.f1_data_modeling.stg_races
+[0m21:05:13.889380 [debug] [Thread-4 (]: Finished running node model.f1_data_modeling.stg_drivers
+[0m21:05:13.900253 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m21:05:13.901865 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:05:13.902906 [info ] [MainThread]: 
+[0m21:05:13.903784 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 4.40 seconds (4.40s).
+[0m21:05:13.905321 [debug] [MainThread]: Command end result
+[0m21:05:13.973076 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m21:05:13.976578 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m21:05:14.018202 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Workspace/f1_project/f1-data-modeling/dbt_project/target/run_results.json
+[0m21:05:14.019716 [info ] [MainThread]: 
+[0m21:05:14.020858 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:05:14.021980 [info ] [MainThread]: 
+[0m21:05:14.023040 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m21:05:14.024526 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.6252923, "process_in_blocks": "448", "process_kernel_time": 0.482534, "process_mem_max_rss": "275436", "process_out_blocks": "0", "process_user_time": 5.046386}
+[0m21:05:14.025437 [debug] [MainThread]: Command `dbt run` succeeded at 21:05:14.025311 after 7.63 seconds
+[0m21:05:14.026184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff6736cc470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65fadbec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xfff65e8bb680>]}
+[0m21:05:14.029216 [debug] [MainThread]: Flushing usage events
+[0m21:05:14.181107 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:09:01.617320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe5312c45c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe5309fed80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe5309ffc80>]}
+
+
+============================== 21:09:01.621367 | b67ccdd3-815b-415a-9609-fb420b9eb280 ==============================
+[0m21:09:01.621367 [info ] [MainThread]: Running with dbt=1.11.12
+[0m21:09:01.622585 [debug] [MainThread]: running dbt with arguments {'log_path': '/Workspace/f1_project/f1-data-modeling/dbt_project/logs', 'cache_selected_only': 'False', 'target_path': 'None', 'fail_fast': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'printer_width': '80', 'version_check': 'True', 'quiet': 'False', 'invocation_command': 'dbt run --select stg_races stg_drivers stg_constructors stg_results --project-dir /Workspace/f1_project/f1-data-modeling/dbt_project --profiles-dir /Workspace/f1_project/f1-data-modeling/dbt_project', 'use_experimental_parser': 'False', 'profiles_dir': '/Workspace/f1_project/f1-data-modeling/dbt_project', 'no_print': 'None', 'empty': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'log_format': 'default'}
+[0m21:09:02.561745 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m21:09:02.562952 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m21:09:02.563634 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m21:09:03.362348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51c4ef410>]}
+[0m21:09:03.453454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe5311bb3b0>]}
+[0m21:09:03.454793 [info ] [MainThread]: Registered adapter: databricks=1.12.2
+[0m21:09:03.582871 [debug] [MainThread]: checksum: f368f5348cf42803b94ef7fb8257ecf3bf9a9a16dd9c8c51fe5172f2dbeb457f, vars: {}, profile: , target: , version: 1.11.12
+[0m21:09:03.861853 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:09:03.862865 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:09:03.863585 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:09:03.872973 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.f1_data_modeling.marts
+[0m21:09:03.901068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51c3aa720>]}
+[0m21:09:04.027554 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m21:09:04.050303 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m21:09:04.115731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51bf99010>]}
+[0m21:09:04.116750 [info ] [MainThread]: Found 4 models, 6 sources, 770 macros
+[0m21:09:04.117620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51bfa66c0>]}
+[0m21:09:04.120041 [info ] [MainThread]: 
+[0m21:09:04.121132 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:09:04.122091 [info ] [MainThread]: 
+[0m21:09:04.123094 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m21:09:04.123939 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:09:04.131149 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project) - Creating connection
+[0m21:09:04.133114 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project'
+[0m21:09:04.151283 [debug] [ThreadPool]: Using databricks connection "list_f1_project"
+[0m21:09:04.152297 [debug] [ThreadPool]: On list_f1_project: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "b67ccdd3-815b-415a-9609-fb420b9eb280", "connection_name": "list_f1_project"} */
+
+    
+
+  SHOW SCHEMAS IN `f1_project`
+
+
+  
+[0m21:09:04.153121 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:09:04.676764 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-bc55-16dd-9a3b-44e1f54e6563) - Created
+[0m21:09:05.018132 [debug] [ThreadPool]: SQL status: OK in 0.860 seconds
+[0m21:09:05.023115 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186da-bc55-16dd-9a3b-44e1f54e6563, command-id=01f186da-bc64-1b1d-b783-a4c6a4eba660) - Closing
+[0m21:09:05.028396 [debug] [ThreadPool]: On list_f1_project: Close
+[0m21:09:05.029477 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-bc55-16dd-9a3b-44e1f54e6563) - Closing
+[0m21:09:05.102729 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_f1_project_silver) - Creating connection
+[0m21:09:05.104929 [debug] [ThreadPool]: Acquiring new databricks connection 'list_f1_project_silver'
+[0m21:09:05.113666 [debug] [ThreadPool]: Using databricks connection "list_f1_project_silver"
+[0m21:09:05.119723 [debug] [ThreadPool]: On list_f1_project_silver: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "b67ccdd3-815b-415a-9609-fb420b9eb280", "connection_name": "list_f1_project_silver"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'f1_project'
+  AND table_schema = 'silver'
+
+  
+[0m21:09:05.120938 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:09:05.296934 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-bcb8-1eca-89bb-1574bb8a469b) - Created
+[0m21:09:05.721554 [debug] [ThreadPool]: SQL status: OK in 0.600 seconds
+[0m21:09:05.725151 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f186da-bcb8-1eca-89bb-1574bb8a469b, command-id=01f186da-bcc3-1f8a-9a96-e1b19b0dc06a) - Closing
+[0m21:09:05.726541 [debug] [ThreadPool]: On list_f1_project_silver: Close
+[0m21:09:05.727575 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f186da-bcb8-1eca-89bb-1574bb8a469b) - Closing
+[0m21:09:05.802018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe5325bf4d0>]}
+[0m21:09:05.806699 [debug] [Thread-3 (]: Began running node model.f1_data_modeling.stg_constructors
+[0m21:09:05.807384 [debug] [Thread-4 (]: Began running node model.f1_data_modeling.stg_drivers
+[0m21:09:05.807967 [debug] [Thread-5 (]: Began running node model.f1_data_modeling.stg_races
+[0m21:09:05.808593 [debug] [Thread-6 (]: Began running node model.f1_data_modeling.stg_results
+[0m21:09:05.809558 [info ] [Thread-3 (]: 1 of 4 START sql view model silver.stg_constructors ............................ [RUN]
+[0m21:09:05.811488 [info ] [Thread-4 (]: 2 of 4 START sql view model silver.stg_drivers ................................. [RUN]
+[0m21:09:05.813525 [info ] [Thread-5 (]: 3 of 4 START sql view model silver.stg_races ................................... [RUN]
+[0m21:09:05.815544 [info ] [Thread-6 (]: 4 of 4 START sql view model silver.stg_results ................................. [RUN]
+[0m21:09:05.816667 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_constructors) - Creating connection
+[0m21:09:05.817849 [debug] [Thread-4 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_drivers) - Creating connection
+[0m21:09:05.818980 [debug] [Thread-5 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_races) - Creating connection
+[0m21:09:05.820262 [debug] [Thread-6 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.f1_data_modeling.stg_results) - Creating connection
+[0m21:09:05.821264 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_constructors'
+[0m21:09:05.822113 [debug] [Thread-4 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_drivers'
+[0m21:09:05.825786 [debug] [Thread-4 (]: Began compiling node model.f1_data_modeling.stg_drivers
+[0m21:09:05.823585 [debug] [Thread-6 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_results'
+[0m21:09:05.824570 [debug] [Thread-3 (]: Began compiling node model.f1_data_modeling.stg_constructors
+[0m21:09:05.822822 [debug] [Thread-5 (]: Acquiring new databricks connection 'model.f1_data_modeling.stg_races'
+[0m21:09:05.837696 [debug] [Thread-4 (]: Writing injected SQL for node "model.f1_data_modeling.stg_drivers"
+[0m21:09:05.839231 [debug] [Thread-6 (]: Began compiling node model.f1_data_modeling.stg_results
+[0m21:09:05.844175 [debug] [Thread-3 (]: Writing injected SQL for node "model.f1_data_modeling.stg_constructors"
+[0m21:09:05.845276 [debug] [Thread-5 (]: Began compiling node model.f1_data_modeling.stg_races
+[0m21:09:05.850161 [debug] [Thread-6 (]: Writing injected SQL for node "model.f1_data_modeling.stg_results"
+[0m21:09:05.855416 [debug] [Thread-5 (]: Writing injected SQL for node "model.f1_data_modeling.stg_races"
+[0m21:09:05.918842 [debug] [Thread-4 (]: Began executing node model.f1_data_modeling.stg_drivers
+[0m21:09:05.934997 [debug] [Thread-4 (]: MATERIALIZING VIEW
+[0m21:09:05.955751 [debug] [Thread-4 (]: Creating view `f1_project`.`silver`.`stg_drivers`
+[0m21:09:05.968880 [debug] [Thread-3 (]: Began executing node model.f1_data_modeling.stg_constructors
+[0m21:09:05.972221 [debug] [Thread-3 (]: MATERIALIZING VIEW
+[0m21:09:05.973749 [debug] [Thread-4 (]: Writing runtime sql for node "model.f1_data_modeling.stg_drivers"
+[0m21:09:05.975886 [debug] [Thread-3 (]: Creating view `f1_project`.`silver`.`stg_constructors`
+[0m21:09:05.976918 [debug] [Thread-6 (]: Began executing node model.f1_data_modeling.stg_results
+[0m21:09:05.978950 [debug] [Thread-3 (]: Writing runtime sql for node "model.f1_data_modeling.stg_constructors"
+[0m21:09:05.982112 [debug] [Thread-6 (]: MATERIALIZING VIEW
+[0m21:09:05.984862 [debug] [Thread-6 (]: Creating view `f1_project`.`silver`.`stg_results`
+[0m21:09:05.986205 [debug] [Thread-6 (]: Writing runtime sql for node "model.f1_data_modeling.stg_results"
+[0m21:09:05.996171 [debug] [Thread-5 (]: Began executing node model.f1_data_modeling.stg_races
+[0m21:09:06.001401 [debug] [Thread-5 (]: MATERIALIZING VIEW
+[0m21:09:06.003332 [debug] [Thread-5 (]: Creating view `f1_project`.`silver`.`stg_races`
+[0m21:09:06.005377 [debug] [Thread-5 (]: Writing runtime sql for node "model.f1_data_modeling.stg_races"
+[0m21:09:06.050776 [debug] [Thread-5 (]: Using databricks connection "model.f1_data_modeling.stg_races"
+[0m21:09:06.051829 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "b67ccdd3-815b-415a-9609-fb420b9eb280", "node_id": "model.f1_data_modeling.stg_races"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_races`
+  
+  as (
+    SELECT
+    cast(season AS int) AS season,
+    cast(round AS int) AS round,
+    raceName as race_name,
+    date as race_date,
+    Circuit.circuitId as circuit_id,
+    Circuit.circuitName as circuit_name,
+    Circuit.url as circuit_url,
+    Circuit.Location.locality as circuit_locality,
+    Circuit.Location.country as circuit_country,
+    cast(Circuit.Location.lat as double) as circuit_lat,
+    cast(Circuit.Location.long as double) as circuit_long,
+    to_timestamp(concat(FirstPractice.date, 'T', FirstPractice.time)) as first_practice,
+    to_timestamp(concat(SecondPractice.date, 'T', SecondPractice.time)) as second_practice,
+    to_timestamp(concat(ThirdPractice.date, 'T', ThirdPractice.time)) as third_practice,
+    to_timestamp(concat(Qualifying.date, 'T', Qualifying.time)) as qualifying,
+    to_timestamp(concat(Sprint.date, 'T', Sprint.time)) as sprint,
+    to_timestamp(concat(SprintQualifying.date, 'T', SprintQualifying.time)) as sprint_qualifying,
+    to_timestamp(concat(SprintShootout.date, 'T', SprintShootout.time)) as sprint_shootout,
+    url as race_url
+
+FROM `f1_project`.`bronze`.`races_raw`
+  )
+
+[0m21:09:06.052721 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m21:09:06.098518 [debug] [Thread-3 (]: Using databricks connection "model.f1_data_modeling.stg_constructors"
+[0m21:09:06.100359 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "b67ccdd3-815b-415a-9609-fb420b9eb280", "node_id": "model.f1_data_modeling.stg_constructors"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_constructors`
+  
+  as (
+    WITH deduped AS(
+    SELECT  
+        constructorId AS constructor_id,
+        name AS driver_name,
+        nationality AS driver_nationality,
+        season,
+        url,
+        ROW_NUMBER() OVER(PARTITION BY constructorId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`constructors_raw`
+)
+SELECT
+    constructor_id,
+    driver_name,
+    driver_nationality,
+    season,
+    url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m21:09:06.101625 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:09:06.118017 [debug] [Thread-4 (]: Using databricks connection "model.f1_data_modeling.stg_drivers"
+[0m21:09:06.119366 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "b67ccdd3-815b-415a-9609-fb420b9eb280", "node_id": "model.f1_data_modeling.stg_drivers"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_drivers`
+  
+  as (
+    WITH deduped AS(
+    SELECT
+        code AS driver_code,
+        driverId AS driver_id,
+        familyName AS family_name,
+        givenName AS given_name,
+        nationality,
+        season,
+        url AS driver_url,
+        CAST(dateofBirth AS DATE) AS date_of_birth,
+        CAST(permanentNumber AS int) AS permanent_number,
+        ROW_NUMBER() OVER(PARTITION BY driverId ORDER BY season DESC) AS rn
+    FROM `f1_project`.`bronze`.`drivers_raw`
+)
+SELECT 
+    driver_id,
+    driver_code,
+    given_name,
+    family_name,
+    date_of_birth,
+    nationality,
+    permanent_number,
+    driver_url
+FROM deduped
+WHERE rn = 1
+  )
+
+[0m21:09:06.120448 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:09:06.172859 [debug] [Thread-6 (]: Using databricks connection "model.f1_data_modeling.stg_results"
+[0m21:09:06.178988 [debug] [Thread-6 (]: On model.f1_data_modeling.stg_results: /* {"app": "dbt", "dbt_version": "1.11.12", "dbt_databricks_version": "1.12.2", "databricks_sql_connector_version": "4.3.0", "profile_name": "f1_data_modeling", "target_name": "dev", "invocation_id": "b67ccdd3-815b-415a-9609-fb420b9eb280", "node_id": "model.f1_data_modeling.stg_results"} */
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status
+FROM `f1_project`.`bronze`.`results_raw`
+  )
+
+[0m21:09:06.181539 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m21:09:06.329462 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186da-bd48-1648-9173-08ecae7197e5) - Created
+[0m21:09:06.397026 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186da-bd65-1a54-959f-71e8c93a6334) - Created
+[0m21:09:06.418141 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186da-bd67-19a2-9e0d-88fe131092f6) - Created
+[0m21:09:06.456964 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f186da-bd6e-103c-8390-4639f8cfb7ae) - Created
+[0m21:09:07.717588 [debug] [Thread-5 (]: SQL status: OK in 1.660 seconds
+[0m21:09:07.720106 [debug] [Thread-5 (]: Databricks adapter: Cursor(session-id=01f186da-bd48-1648-9173-08ecae7197e5, command-id=01f186da-bd61-15d4-8967-bfa1758b8812) - Closing
+[0m21:09:07.733033 [debug] [Thread-5 (]: Applying tags to relation None
+[0m21:09:07.735438 [debug] [Thread-3 (]: SQL status: OK in 1.630 seconds
+[0m21:09:07.738150 [debug] [Thread-5 (]: On model.f1_data_modeling.stg_races: Close
+[0m21:09:07.739938 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f186da-bd65-1a54-959f-71e8c93a6334, command-id=01f186da-bd6c-135c-a800-25b42a7ba2da) - Closing
+[0m21:09:07.740945 [debug] [Thread-5 (]: Databricks adapter: Connection(session-id=01f186da-bd48-1648-9173-08ecae7197e5) - Closing
+[0m21:09:07.742107 [debug] [Thread-3 (]: Applying tags to relation None
+[0m21:09:07.836352 [debug] [Thread-4 (]: SQL status: OK in 1.720 seconds
+[0m21:09:07.838225 [debug] [Thread-4 (]: Databricks adapter: Cursor(session-id=01f186da-bd67-19a2-9e0d-88fe131092f6, command-id=01f186da-bd6e-184e-8e89-5b648c7cadb7) - Closing
+[0m21:09:07.839705 [debug] [Thread-4 (]: Applying tags to relation None
+[0m21:09:07.845692 [debug] [Thread-3 (]: On model.f1_data_modeling.stg_constructors: Close
+[0m21:09:07.848032 [debug] [Thread-6 (]: SQL status: OK in 1.670 seconds
+[0m21:09:07.849067 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f186da-bd65-1a54-959f-71e8c93a6334) - Closing
+[0m21:09:07.850685 [debug] [Thread-6 (]: Databricks adapter: Cursor(session-id=01f186da-bd6e-103c-8390-4639f8cfb7ae, command-id=01f186da-bd75-10ba-88bd-d7ec48bcdfc9) - Closing
+[0m21:09:07.852472 [debug] [Thread-6 (]: Applying tags to relation None
+[0m21:09:07.915438 [debug] [Thread-4 (]: On model.f1_data_modeling.stg_drivers: Close
+[0m21:09:07.916526 [debug] [Thread-4 (]: Databricks adapter: Connection(session-id=01f186da-bd67-19a2-9e0d-88fe131092f6) - Closing
+[0m21:09:07.973025 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe5311213a0>]}
+[0m21:09:07.974047 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51bb35550>]}
+[0m21:09:07.974997 [debug] [Thread-6 (]: On model.f1_data_modeling.stg_results: Close
+[0m21:09:07.976323 [info ] [Thread-4 (]: 2 of 4 OK created sql view model silver.stg_drivers ............................ [[32mOK[0m in 2.15s]
+[0m21:09:07.980455 [debug] [Thread-4 (]: Finished running node model.f1_data_modeling.stg_drivers
+[0m21:09:07.979204 [debug] [Thread-6 (]: Databricks adapter: Connection(session-id=01f186da-bd6e-103c-8390-4639f8cfb7ae) - Closing
+[0m21:09:07.977839 [info ] [Thread-5 (]: 3 of 4 OK created sql view model silver.stg_races .............................. [[32mOK[0m in 2.15s]
+[0m21:09:07.982781 [debug] [Thread-5 (]: Finished running node model.f1_data_modeling.stg_races
+[0m21:09:08.047332 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51bb35340>]}
+[0m21:09:08.048422 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b67ccdd3-815b-415a-9609-fb420b9eb280', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51bb37830>]}
+[0m21:09:08.049783 [info ] [Thread-3 (]: 1 of 4 OK created sql view model silver.stg_constructors ....................... [[32mOK[0m in 2.23s]
+[0m21:09:08.050924 [info ] [Thread-6 (]: 4 of 4 OK created sql view model silver.stg_results ............................ [[32mOK[0m in 2.23s]
+[0m21:09:08.052080 [debug] [Thread-3 (]: Finished running node model.f1_data_modeling.stg_constructors
+[0m21:09:08.053166 [debug] [Thread-6 (]: Finished running node model.f1_data_modeling.stg_results
+[0m21:09:08.055742 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m21:09:08.057041 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m21:09:08.058367 [info ] [MainThread]: 
+[0m21:09:08.059362 [info ] [MainThread]: Finished running 4 view models in 0 hours 0 minutes and 3.94 seconds (3.94s).
+[0m21:09:08.060949 [debug] [MainThread]: Command end result
+[0m21:09:08.132372 [debug] [MainThread]: Wrote artifact WritableManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/manifest.json
+[0m21:09:08.135867 [debug] [MainThread]: Wrote artifact SemanticManifest to /Workspace/f1_project/f1-data-modeling/dbt_project/target/semantic_manifest.json
+[0m21:09:08.162735 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Workspace/f1_project/f1-data-modeling/dbt_project/target/run_results.json
+[0m21:09:08.163748 [info ] [MainThread]: 
+[0m21:09:08.165546 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:09:08.166598 [info ] [MainThread]: 
+[0m21:09:08.167972 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m21:09:08.169873 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.652108, "process_in_blocks": "240", "process_kernel_time": 0.34051, "process_mem_max_rss": "268996", "process_out_blocks": "0", "process_user_time": 4.945565}
+[0m21:09:08.171043 [debug] [MainThread]: Command `dbt run` succeeded at 21:09:08.170892 after 6.65 seconds
+[0m21:09:08.172057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe52d7146b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51bb132f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffe51b983ce0>]}
+[0m21:09:08.173048 [debug] [MainThread]: Flushing usage events
+[0m21:09:08.973849 [debug] [MainThread]: An error was encountered while trying to flush usage events

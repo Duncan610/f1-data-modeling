@@ -1,0 +1,38 @@
+
+  
+  
+  
+  create or replace view `f1_project`.`silver`.`stg_results`
+  
+  as (
+    SELECT
+  Constructor.constructorId AS constructor_id,
+  Constructor.name AS constructor_name,
+  Constructor.nationality AS constructor_nationality,
+  Constructor.url AS constructor_url,
+  Driver.code AS driver_code,
+  Driver.dateOfBirth AS date_of_birth,
+  Driver.driverId AS driver_id,
+  Driver.familyName AS driver_family_name,
+  Driver.givenName AS driver_given_name,
+  Driver.nationality AS driver_nationality,
+  Driver.url AS driver_url,
+  Driver.permanentNumber AS driver_permanent_number,
+  FastestLap.AverageSpeed.speed AS fastest_lap_average_speed,
+  FastestLap.AverageSpeed.units AS fastest_lap_average_speed_units,
+  FastestLap.Time.time AS fastest_lap_time,
+  FastestLap.lap AS fastest_lap,
+  FastestLap.rank AS fastest_lap_rank,
+  Time.millis AS time_in_millisecond,
+  Time.time AS time_in_seconds,
+  CAST(grid AS INT) AS grid,
+  CAST(laps AS INT) AS laps,
+  CAST(number AS INT) AS number,
+  CAST(points AS FLOAT) AS points,
+  CAST(positionText AS INT) AS position_text,
+  CAST(raceName AS STRING) AS race_name,
+  CAST(round AS INT) AS round,
+  CAST(season AS INT) AS season,
+  status
+FROM `f1_project`.`bronze`.`results_raw`
+  )
