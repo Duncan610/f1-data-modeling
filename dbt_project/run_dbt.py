@@ -1,7 +1,7 @@
 import subprocess
 
 result = subprocess.run(
-    ["dbt", "run", "--select", "stg_races", "stg_drivers", "stg_constructors", "stg_results", "stg_laps", "stg_pit_stops", "dim_driver", "fact_race_results",
+    ["dbt", "run", "--select", "stg_races", "stg_drivers", "stg_constructors", "stg_results", "stg_laps", "stg_pit_stops", "dim_driver", "fact_race_results", "dim_circuit", "dim_constructor", "dim_circuit", "dim_races",
      "dim_constructor"
      "--project-dir", "/Workspace/f1_project/f1-data-modeling/dbt_project",
      "--profiles-dir", "/Workspace/f1_project/f1-data-modeling/dbt_project"],
