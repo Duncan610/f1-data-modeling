@@ -3,4 +3,4 @@ SELECT
     driver_name,
     driver_nationality,
     url
-FROM {{ ref('stg_constructors') }}
+FROM `f1_project`.`silver`.`stg_constructors`

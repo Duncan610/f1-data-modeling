@@ -1,0 +1,32 @@
+
+  
+    
+        create or replace table `f1_project`.`gold`.`dim_driver_constructor`
+      
+      
+    using delta
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      as
+      WITH driver_constructor_seasons AS (
+    SELECT DISTINCT
+        season,
+        driver_id,
+        constructor_id
+    FROM `f1_project`.`silver`.`stg_results`
+)
+
+SELECT
+    driver_id,
+    constructor_id,
+    season,
+    season = MAX(season) OVER (PARTITION BY driver_id) AS is_current
+FROM driver_constructor_seasons
+  
