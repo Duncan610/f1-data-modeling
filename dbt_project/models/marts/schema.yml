@@ -1,0 +1,114 @@
+version: 2
+
+models:
+  - name: dim_driver
+    description: One row per unique driver across the 2023-2024 seasons, with bio details.
+    columns:
+      - name: driver_id
+        description: Primary key — unique driver identifier from Jolpica-F1.
+        tests:
+          - unique
+          - not_null
+      - name: driver_code
+        description: Three-letter driver code (e.g. VER, HAM).
+        tests:
+          - not_null
+
+  - name: dim_constructor
+    description: One row per unique constructor/team across the 2023-2024 seasons.
+    columns:
+      - name: constructor_id
+        description: Primary key — unique constructor identifier from Jolpica-F1.
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_circuit
+    description: One row per unique circuit, deduplicated from race data.
+    columns:
+      - name: circuit_id
+        description: Primary key — unique circuit identifier.
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_race
+    description: One row per race, with session timestamps and a circuit foreign key.
+    columns:
+      - name: season
+        tests:
+          - not_null
+      - name: round
+        tests:
+          - not_null
+      - name: circuit_id
+        description: Foreign key to dim_circuit.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_circuit')
+              field: circuit_id
+
+  - name: dim_driver_constructor
+    description: >
+      SCD2-style bridge table tracking which constructor each driver raced
+      for, at season grain. Can contain multiple rows per driver per season
+      for mid-season team changes, since exact transfer dates aren't
+      supported by the source data.
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_driver')
+              field: driver_id
+      - name: constructor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_constructor')
+              field: constructor_id
+
+  - name: fact_race_results
+    description: One row per driver per race — final classification and points.
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_driver')
+              field: driver_id
+      - name: constructor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_constructor')
+              field: constructor_id
+      - name: status_category
+        tests:
+          - accepted_values:
+              values: ['Finished', 'DNF', 'Disqualified', 'Other']
+
+  - name: fact_lap_times
+    description: One row per driver per lap per race, including gap-to-leader.
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_driver')
+              field: driver_id
+      - name: lap_number
+        tests:
+          - not_null
+
+  - name: fact_pit_stops
+    description: One row per physical pit stop, with duration derived via lead().
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_driver')
+              field: driver_id
+      - name: pit_duration_ms
